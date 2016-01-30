@@ -2,5 +2,88 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game Events</name>
-    <events />
+    <events>
+        <event-block sid="348905882781371">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="4475793919598773" type="System">
+                    <param id="0" name="Interval (seconds)">random(5,20) * 0.05</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="5054621793663243" type="Hand">
+                    <param id="0" name="Object">NotificationCall</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="8103820525239211" type="Hand">
+                    <param id="0" name="Object">NotificationCall</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="7849267691502817" type="Hand">
+                    <param id="0" name="Object">NotificationCall</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6867294904265459">
+            <conditions>
+                <condition id="-18" name="On created" sid="7986225444250673" type="NotificationCall" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="5265257254629162" type="NotificationCall">
+                    <param id="0" name="Angle">random(0,360)</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="7534398725249679" type="NotificationCall">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1407059115445704">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="301759475172199" type="NotificationCall">
+                    <param id="0" name="Object">PhoneBoundingBox</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="6262757419490937" type="NotificationCall">
+                    <param id="0" name="Object">PhoneBoundingBox</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9331493124024701">
+            <conditions>
+                <condition id="17" name="On tap object" sid="9456009968291541" type="Touch">
+                    <param id="0" name="Object">NotificationCall</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="9812775526503957" type="NotificationCall" />
+            </actions>
+        </event-block>
+        <event-block sid="5007158400054925">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="306751372409261" type="NotificationCall" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="234874387455936" type="UIText">
+                    <param id="0" name="Text">int(UIText.Text) + 10</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Game over if notifications swamp your phone?</comment>
+        <event-block sid="3637171324403918">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="2788357246427832" type="System">
+                    <param id="0" name="First value">NotificationCall.Count</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Second value">50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-26" name="Restart layout" sid="5125564036366554" type="System" />
+            </actions>
+        </event-block>
+    </events>
 </c2eventsheet>

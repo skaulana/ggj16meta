@@ -11,9 +11,13 @@
     <saved-with-version>22100</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
     </used-plugins>
-    <used-behaviors />
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -28,7 +32,7 @@
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Crop</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Portrait</prop>
@@ -47,17 +51,36 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5658651601454527" speed="5">
-                    <frame duration="1" hotspotX="0.500756" hotspotY="0.500741" />
+                    <frame duration="1" hotspotX="0.605144" hotspotY="0.385185" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="7066072740699913">
+        <object-type name="NotificationCall" sid="7066072740699913">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="7881737151992426">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9431805963134304" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\bchaudhari.LITEPOINT\Documents\GitHub\ggj16meta\metarituals\Files\incoming_call.png" />
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="PhoneBoundingBox" sid="4489578302563695">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3734708317303023" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Touch" sid="5943648558541478">
+            <plugin id="Touch" />
+        </object-type>
+        <object-type name="UIText" sid="9761306585677426">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />
@@ -67,7 +90,13 @@
     <event-folder>
         <event-sheet>Game Events.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Touch" uid="7">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
     <sounds-folder />
     <music-folder />
     <files-folder>
