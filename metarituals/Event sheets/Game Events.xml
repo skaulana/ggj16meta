@@ -20,8 +20,18 @@
                 </action>
                 <action id="-30" name="Set layer effect enabled" sid="1953156288814477" type="System">
                     <param id="0" name="Layer">0</param>
-                    <param id="1" name="Mode">0</param>
-                    <param id="2" name="Effect">&quot;Tint&quot;</param>
+                    <param id="1" name="Mode">1</param>
+                    <param id="2" name="Effect">&quot;RadialBlur&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2218747031618236">
+            <conditions>
+                <condition id="-18" name="On created" sid="360966866856221" type="Kitty" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="1802869051595476" type="Kitty">
+                    <param id="0" name="Angle">180</param>
                 </action>
             </actions>
         </event-block>
@@ -43,8 +53,8 @@
                 </action>
                 <action id="-30" name="Set layer effect enabled" sid="6561506459766982" type="System">
                     <param id="0" name="Layer">0</param>
-                    <param id="1" name="Mode">1</param>
-                    <param id="2" name="Effect">&quot;Tint&quot;</param>
+                    <param id="1" name="Mode">0</param>
+                    <param id="2" name="Effect">&quot;RadialBlur&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -71,8 +81,8 @@
                 </action>
                 <action id="-30" name="Set layer effect enabled" sid="7029503480773266" type="System">
                     <param id="0" name="Layer">0</param>
-                    <param id="1" name="Mode">0</param>
-                    <param id="2" name="Effect">&quot;Tint&quot;</param>
+                    <param id="1" name="Mode">1</param>
+                    <param id="2" name="Effect">&quot;RadialBlur&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -194,6 +204,92 @@
             <actions>
                 <action id="0" name="Set text" sid="2860924648385344" type="UIText">
                     <param id="0" name="Text">int(UIText.Text) - 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4233266389900364">
+            <conditions>
+                <condition id="-3" inverted="1" name="Is on-screen" sid="4659029505387119" type="Kitty" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7609355734808052" type="Kitty" />
+                <action id="-16" name="Wait" sid="6321797710899625" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-3" name="Create object" sid="8174818443313231" type="System">
+                    <param id="0" name="Object to create">BigKitty</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">500</param>
+                    <param id="3" name="Y">2200</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2749777702054123">
+            <conditions>
+                <condition id="-18" name="On created" sid="1474484364300037" type="BigKitty" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="1057326029832346" type="BigKitty">
+                    <param id="0" name="Instance variable">Taps</param>
+                    <param id="1" name="Value">20 + random(0,10)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8640191733858953">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="223946112553209" type="System" />
+                <condition id="-8" name="Compare two values" sid="6136143258274861" type="System">
+                    <param id="0" name="First value">BigKitty.Count</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="3336006643986715" type="BigKitty">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">1500</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="4301805255041481" type="BigKitty">
+                    <param id="0" name="Angle">270</param>
+                    <param id="1" name="Distance">15</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4994931080639707">
+            <conditions>
+                <condition id="17" name="On tap object" sid="4249251669165353" type="Touch">
+                    <param id="0" name="Object">BigKitty</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="5620428936407687" type="BigKitty">
+                    <param id="0" name="Instance variable">Taps</param>
+                    <param id="1" name="Value">BigKitty.Taps - 1</param>
+                </action>
+                <action id="-23" name="Move at angle" sid="894903237893221" type="BigKitty">
+                    <param id="0" name="Angle">90</param>
+                    <param id="1" name="Distance">250</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8386813616876731">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="126891773645475" type="BigKitty">
+                    <param id="0" name="Instance variable">Taps</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1112679380139853" type="BigKitty" />
+                <action id="-16" name="Wait" sid="9624002472673879" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-3" name="Create object" sid="5628084918255715" type="System">
+                    <param id="0" name="Object to create">Kitty</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">1100</param>
+                    <param id="3" name="Y">400</param>
                 </action>
             </actions>
         </event-block>
