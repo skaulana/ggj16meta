@@ -83,8 +83,8 @@
                         <width>1234.970581055</width>
                         <height>1261.127319336</height>
                         <depth>0</depth>
-                        <hotspotX>0.500756025</hotspotX>
-                        <hotspotY>0.500741005</hotspotY>
+                        <hotspotX>0.500756443</hotspotX>
+                        <hotspotY>0.500740767</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -93,6 +93,47 @@
             <effects />
         </layer>
         <layer name="Foreground Focus Layer" sid="4833517529444173">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="Sprite" uid="2">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>536</x>
+                        <y>1136</y>
+                        <z>0</z>
+                        <width>1092</width>
+                        <height>776</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
+        <layer name="Apps" sid="5291834179666086">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
