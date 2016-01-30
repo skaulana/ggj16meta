@@ -10,6 +10,8 @@
     <unique-id>2m2oqhlgof90t</unique-id>
     <saved-with-version>22100</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="NinePatch" version="1">9-patch</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors />
@@ -41,6 +43,132 @@
         <object-type name="TiledBackground" sid="9193115221312366">
             <plugin id="TiledBg" />
             <texture />
+        </object-type>
+        <object-type name="9patch" sid="887405232983874">
+            <plugin id="NinePatch" />
+            <texture />
+        </object-type>
+        <object-type name="Sprite" sid="994508276248394">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6496053896646936" speed="5">
+                    <frame duration="1" hotspotX="0.501014" hotspotY="0.5" original-source="C:\Users\Local.Admin\Desktop\Tuck Docs\0. Post-Tuck\Extracurricular\GGJ\Twitter_logo-Update-Hints.gif">
+                        <collision-poly>
+                            <point x="0.030426" y="0.0317797" />
+                            <point x="0.498986" y="0" />
+                            <point x="0.967546" y="0.0338983" />
+                            <point x="1" y="0.5" />
+                            <point x="0.969574" y="0.96822" />
+                            <point x="0.498986" y="1" />
+                            <point x="0.0324544" y="0.966102" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="3763132062327464">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6839220722653109" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Local.Admin\Desktop\Tuck Docs\0. Post-Tuck\Extracurricular\GGJ\twitter_twitter_icon_social_media_icon_ios_7_twitter_png.png">
+                        <collision-poly>
+                            <point x="0.0917969" y="0.0917969" />
+                            <point x="0.5" y="0.03125" />
+                            <point x="0.908203" y="0.0917969" />
+                            <point x="0.96875" y="0.5" />
+                            <point x="0.908203" y="0.908203" />
+                            <point x="0.5" y="0.96875" />
+                            <point x="0.0917969" y="0.908203" />
+                            <point x="0.03125" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="6616143778892665">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6838330663826391" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Local.Admin\Desktop\Tuck Docs\0. Post-Tuck\Extracurricular\GGJ\iOS-6-Features-Mail-with-VIP-and-Ultra-Fast-Attachments-2.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite4" sid="8818517337165017">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2893806472894934" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Local.Admin\Desktop\Tuck Docs\0. Post-Tuck\Extracurricular\GGJ\iphone_mailicon.png">
+                        <collision-poly>
+                            <point x="0.078125" y="0.078125" />
+                            <point x="0.5" y="0.0078125" />
+                            <point x="0.921875" y="0.078125" />
+                            <point x="0.960938" y="0.5" />
+                            <point x="0.898438" y="0.898438" />
+                            <point x="0.5" y="0.945313" />
+                            <point x="0.101563" y="0.898438" />
+                            <point x="0.0390625" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="6865572933769228">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3568464455006273" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502732" original-source="C:\Users\Local.Admin\Desktop\Tuck Docs\0. Post-Tuck\Extracurricular\GGJ\Netflix-iOS-icon.png">
+                        <collision-poly>
+                            <point x="0.0752688" y="0.0765027" />
+                            <point x="0.5" y="0.0163934" />
+                            <point x="0.930108" y="0.0710383" />
+                            <point x="0.973118" y="0.497268" />
+                            <point x="0.930108" y="0.928962" />
+                            <point x="0.5" y="0.978142" />
+                            <point x="0.0752688" y="0.923497" />
+                            <point x="0.0322581" y="0.497268" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite6" sid="1349272362405088">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3278214533421952" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Local.Admin\Desktop\Tuck Docs\0. Post-Tuck\Extracurricular\GGJ\ios-7-photo-icon-pn.png">
+                        <collision-poly>
+                            <point x="0.149805" y="0.149805" />
+                            <point x="0.5" y="0.0972763" />
+                            <point x="0.85214" y="0.14786" />
+                            <point x="0.898833" y="0.5" />
+                            <point x="0.850195" y="0.850195" />
+                            <point x="0.5" y="0.898833" />
+                            <point x="0.151751" y="0.848249" />
+                            <point x="0.105058" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite7" sid="3678515007668857">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7421017017148798" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Local.Admin\Desktop\Tuck Docs\0. Post-Tuck\Extracurricular\GGJ\iMessages-icon.png">
+                        <collision-poly>
+                            <point x="0.0703125" y="0.0703125" />
+                            <point x="0.5" y="0" />
+                            <point x="0.929688" y="0.0703125" />
+                            <point x="1" y="0.5" />
+                            <point x="0.929688" y="0.929688" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0703125" y="0.929688" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
