@@ -4,8 +4,8 @@
     <sid>8873350371196689</sid>
     <event-sheet>Game Events</event-sheet>
     <size>
-        <width>960</width>
-        <height>1708</height>
+        <width>1080</width>
+        <height>1920</height>
     </size>
     <margins>
         <horizontal>0</horizontal>
@@ -13,7 +13,25 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Layer 0" sid="8722530541249526">
+        <layer name="Background Focus Layer" sid="6533394146797247">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects />
+        </layer>
+        <layer name="Phone Layer" sid="8722530541249526">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -37,8 +55,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>73</x>
-                        <y>698</y>
+                        <x>149</x>
+                        <y>662</y>
                         <z>0</z>
                         <width>760</width>
                         <height>1597</height>
@@ -49,7 +67,47 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Hand" uid="1">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>429</x>
+                        <y>1778</y>
+                        <z>0</z>
+                        <width>1234.970581055</width>
+                        <height>1261.127319336</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500756025</hotspotX>
+                        <hotspotY>0.500741005</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
+            <effects />
+        </layer>
+        <layer name="Foreground Focus Layer" sid="4833517529444173">
+            <initially-visible>1</initially-visible>
+            <background-color>255,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
             <effects />
         </layer>
     </layers>
