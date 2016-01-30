@@ -18,7 +18,10 @@
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="radialblur">Radial blur</effect>
+        <effect author="Scirra" id="tint">Tint</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -43,7 +46,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="TiledBackground" sid="9193115221312366">
+        <object-type name="PhoneShell" sid="9193115221312366">
             <plugin id="TiledBg" />
             <texture />
         </object-type>
@@ -81,6 +84,10 @@
         </object-type>
         <object-type name="UIText" sid="9761306585677426">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="PhoneScreen" sid="3028156690312282">
+            <plugin id="TiledBg" />
+            <texture />
         </object-type>
     </object-folder>
     <families />

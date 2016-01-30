@@ -15,6 +15,35 @@
     <layers>
         <layer name="Background Focus Layer" sid="6533394146797247">
             <initially-visible>1</initially-visible>
+            <background-color>0,51,153</background-color>
+            <transparent>0</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances />
+            <effects>
+                <effect-type name="Tint">
+                    <effect id="tint" />
+                    <effect-instance type="Tint">
+                        <parameters>
+                            <blue>0</blue>
+                            <green>0.5</green>
+                            <red>2</red>
+                        </parameters>
+                    </effect-instance>
+                </effect-type>
+            </effects>
+        </layer>
+        <layer name="Phone Layer" sid="8722530541249526">
+            <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
             <parallax>
@@ -28,26 +57,8 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
-            <effects />
-        </layer>
-        <layer name="Phone Layer" sid="8722530541249526">
-            <initially-visible>1</initially-visible>
-            <background-color>255,255,255</background-color>
-            <transparent>0</transparent>
-            <parallax>
-                <x>1</x>
-                <y>1</y>
-            </parallax>
-            <zoom-rate>1</zoom-rate>
-            <opacity>1</opacity>
-            <force-own-texture>0</force-own-texture>
-            <global>0</global>
-            <use-render-cells>0</use-render-cells>
-            <blend-mode>0</blend-mode>
-            <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TiledBackground" uid="0">
+                <instance type="PhoneShell" uid="0">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <hotspot>Top-left</hotspot>
@@ -85,6 +96,26 @@
                         <depth>0</depth>
                         <hotspotX>0.605143726</hotspotX>
                         <hotspotY>0.385185182</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PhoneScreen" uid="9">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>215</x>
+                        <y>900</y>
+                        <z>0</z>
+                        <width>640</width>
+                        <height>1136</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -231,7 +262,17 @@
                     </world>
                 </instance>
             </instances>
-            <effects />
+            <effects>
+                <effect-type name="RadialBlur">
+                    <effect id="radialblur" />
+                    <effect-instance type="RadialBlur">
+                        <parameters>
+                            <intensity>1</intensity>
+                            <radius>2</radius>
+                        </parameters>
+                    </effect-instance>
+                </effect-type>
+            </effects>
         </layer>
         <layer name="UI" sid="4807402738584515">
             <initially-visible>1</initially-visible>
@@ -254,7 +295,7 @@
                         <text>0</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Garamond,-96,400,0</font>
-                        <color>0,0,0</color>
+                        <color>255,255,153</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -264,10 +305,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>826</x>
+                        <x>606</x>
                         <y>70</y>
                         <z>0</z>
-                        <width>176</width>
+                        <width>396</width>
                         <height>130</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
