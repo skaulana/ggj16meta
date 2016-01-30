@@ -86,12 +86,7 @@
                     <param id="2" name="Image point">0</param>
                 </action>
                 <action id="0" name="Spawn another object" sid="8103820525239211" type="Hand">
-                    <param id="0" name="Object">NotificationCall</param>
-                    <param id="1" name="Layer">2</param>
-                    <param id="2" name="Image point">0</param>
-                </action>
-                <action id="0" name="Spawn another object" sid="7849267691502817" type="Hand">
-                    <param id="0" name="Object">NotificationCall</param>
+                    <param id="0" name="Object">TwitterNotification</param>
                     <param id="1" name="Layer">2</param>
                     <param id="2" name="Image point">0</param>
                 </action>
@@ -192,6 +187,45 @@
                 <action id="0" name="Set text" sid="2860924648385344" type="UIText">
                     <param id="0" name="Text">int(UIText.Text) - 1</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="7129029543307049">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block sid="8183416259455769">
+            <conditions>
+                <condition id="-18" name="On created" sid="461647107919903" type="TwitterNotification" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="7936415574103185" type="TwitterNotification">
+                    <param id="0" name="Angle">random(0,360)</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="8111467787470791" type="TwitterNotification">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8832060800004481">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9829468895053893" type="TwitterNotification">
+                    <param id="0" name="Object">PhoneBoundingBox</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="7679798569299564" type="TwitterNotification">
+                    <param id="0" name="Object">PhoneBoundingBox</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3759320577581485">
+            <conditions>
+                <condition id="17" name="On tap object" sid="5368322413743876" type="Touch">
+                    <param id="0" name="Object">TwitterNotification</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7267836670100644" type="TwitterNotification" />
             </actions>
         </event-block>
     </events>

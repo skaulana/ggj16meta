@@ -89,6 +89,19 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
+        <object-type name="TwitterNotification" sid="3192342011288762">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="7203064935504738">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="736964040608917" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Local.Admin\Desktop\Tuck Docs\0. Post-Tuck\Extracurricular\GGJ\Twitter Notification.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
