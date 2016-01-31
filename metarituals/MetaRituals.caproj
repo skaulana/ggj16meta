@@ -17,7 +17,10 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
     </used-behaviors>
     <used-effects>
@@ -302,6 +305,11 @@
         </object-type>
         <object-type name="ScoreRing" sid="6211458144050413">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="200830894905317">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4582478305043461" speed="0">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sean\Desktop\score6-6.png">
@@ -491,6 +499,31 @@
         </object-type>
         <object-type name="TimerText" sid="5313607387044013">
             <plugin id="Text" />
+        </object-type>
+        <object-type name="Back" sid="8098497491570636">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Rotate" sid="7969083903548333">
+                    <behavior id="Rotate" />
+                </behavior-type>
+                <behavior-type name="Fade" sid="4760080919293851">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3504222211069559" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sean\Desktop\spinny.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="0.516176" y="0.5" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.488235" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
