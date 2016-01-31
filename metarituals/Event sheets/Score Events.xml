@@ -6,6 +6,36 @@
         <variable constant="0" name="Score" sid="4446425206276819" static="0" type="number">-1</variable>
         <variable constant="0" name="PhoneTotalTime" sid="5466476029891695" static="0" type="number">1</variable>
         <variable constant="0" name="LifeTotalTime" sid="9648450509061987" static="0" type="number">1</variable>
+        <comment>Keep the background ambience going</comment>
+        <event-block sid="7215427800216058">
+            <conditions>
+                <condition behavior="Fade" id="0" name="On fade-out finished" sid="5839493195172169" type="Back" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="0" name="Restart fade" sid="5101287149877829" type="Back" />
+            </actions>
+        </event-block>
+        <comment>Pulse the score ring (once)</comment>
+        <event-block sid="5007864956397184">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3483721200664562" type="System" />
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="3834460730199125" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="4491263479813991" type="ScoreRing">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="6224253998469058" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action behavior="Sine" id="0" name="Set active" sid="5832518881392568" type="ScoreRing">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Set score values from previous game, if present</comment>
         <event-block sid="6269341974740312">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="3899419084413959" type="System" />
@@ -55,6 +85,19 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="1702838156496742">
+            <conditions>
+                <condition id="17" name="On tap object" sid="8947919687611175" type="Touch">
+                    <param id="0" name="Object">PhoneSmall</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="9095172076231298" type="System">
+                    <param id="0" name="Layout">Game Screen</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>These are for choosing which % of the score ring to show</comment>
         <event-block sid="8596837968835581">
             <conditions>
                 <condition id="-18" name="On created" sid="7664623060611137" type="ScoreRing" />
@@ -190,18 +233,6 @@
                     <param id="0" name="Frame number">6</param>
                 </action>
                 <action id="2" name="Stop" sid="924181640056003" type="ScoreRing" />
-            </actions>
-        </event-block>
-        <event-block sid="1702838156496742">
-            <conditions>
-                <condition id="17" name="On tap object" sid="8947919687611175" type="Touch">
-                    <param id="0" name="Object">PhoneSmall</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="9095172076231298" type="System">
-                    <param id="0" name="Layout">Game Screen</param>
-                </action>
             </actions>
         </event-block>
     </events>
