@@ -248,9 +248,9 @@
                 <condition id="-18" name="On created" sid="1474484364300037" type="BigKitty" />
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="7246267025722416" type="BigKitty">
+                <action id="-10" name="Set value" sid="1057326029832346" type="BigKitty">
                     <param id="0" name="Instance variable">Taps</param>
-                    <param id="1" name="Value">1</param>
+                    <param id="1" name="Value">20 + random(0,10)</param>
                 </action>
             </actions>
         </event-block>
@@ -281,50 +281,30 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="-10" name="Set value" sid="5620428936407687" type="BigKitty">
+                    <param id="0" name="Instance variable">Taps</param>
+                    <param id="1" name="Value">BigKitty.Taps - 1</param>
+                </action>
                 <action id="-23" name="Move at angle" sid="894903237893221" type="BigKitty">
                     <param id="0" name="Angle">90</param>
                     <param id="1" name="Distance">250</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="4615626613657207">
-            <conditions>
-                <condition id="17" name="On tap object" sid="9156958480289369" type="Touch">
-                    <param id="0" name="Object">yarnball</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="530606510451411" type="BigKitty">
-                    <param id="0" name="Instance variable">Taps</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="6186963628647685" type="BigKitty" />
-                <action id="-16" name="Wait" sid="7779755479388849" type="System">
-                    <param id="0" name="Seconds">3</param>
-                </action>
-                <action id="-3" name="Create object" sid="5650486672126817" type="System">
-                    <param id="0" name="Object to create">Kitty</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="X">1100</param>
-                    <param id="3" name="Y">400</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="8386813616876731">
             <conditions>
-                <condition disabled="1" id="-7" name="Compare instance variable" sid="126891773645475" type="BigKitty">
+                <condition id="-7" name="Compare instance variable" sid="126891773645475" type="BigKitty">
                     <param id="0" name="Instance variable">Taps</param>
                     <param id="1" name="Comparison">3</param>
                     <param id="2" name="Value">0</param>
                 </condition>
             </conditions>
             <actions>
-                <action disabled="1" id="-9" name="Destroy" sid="1112679380139853" type="BigKitty" />
-                <action disabled="1" id="-16" name="Wait" sid="9624002472673879" type="System">
+                <action id="-9" name="Destroy" sid="1112679380139853" type="BigKitty" />
+                <action id="-16" name="Wait" sid="9624002472673879" type="System">
                     <param id="0" name="Seconds">3</param>
                 </action>
-                <action disabled="1" id="-3" name="Create object" sid="5628084918255715" type="System">
+                <action id="-3" name="Create object" sid="5628084918255715" type="System">
                     <param id="0" name="Object to create">Kitty</param>
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="X">1100</param>
