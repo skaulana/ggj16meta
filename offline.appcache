@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1454266091
+#1454277501
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -26,6 +26,18 @@ images/phonesmall-sheet0.png
 images/addten-sheet0.png
 images/yarnball-sheet0.png
 images/back-sheet0.png
+images/calling-sheet0.png
+images/logo-sheet0.png
+images/cata-sheet0.png
+images/backgroundbackground-sheet0.png
+media/alert_49.m4a
+media/alert_49.ogg
+media/catappears.m4a
+media/catappears.ogg
+media/clickonyarnball.m4a
+media/clickonyarnball.ogg
+media/angry-cat.m4a
+media/angry-cat.ogg
 icon-16.png
 icon-32.png
 icon-114.png
