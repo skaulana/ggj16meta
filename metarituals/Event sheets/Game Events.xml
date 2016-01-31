@@ -230,7 +230,7 @@
             <actions>
                 <action id="-9" name="Destroy" sid="7609355734808052" type="Kitty" />
                 <action id="-16" name="Wait" sid="6321797710899625" type="System">
-                    <param id="0" name="Seconds">3</param>
+                    <param id="0" name="Seconds">10</param>
                 </action>
                 <action id="-3" name="Create object" sid="8174818443313231" type="System">
                     <param id="0" name="Object to create">BigKitty</param>
@@ -341,6 +341,12 @@
                 <action id="-15" name="Set visible" sid="4049582475713059" type="InstaNote">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="-15" name="Set visible" sid="1459472557614" type="Facebook">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8511201022461328" type="FaceNote">
+                    <param id="0" name="Visibility">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="4502541080321943">
@@ -382,6 +388,12 @@
                 <action id="-15" name="Set visible" sid="6450882986668545" type="NotificationCall">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="-15" name="Set visible" sid="6984726966744784" type="Facebook">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5485819199202752" type="FaceNote">
+                    <param id="0" name="Visibility">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="3590076730017712">
@@ -389,11 +401,11 @@
                 <condition id="-6" name="Every X seconds" sid="481199909279386" type="System">
                     <param id="0" name="Interval (seconds)">3.0</param>
                 </condition>
-                <condition id="-9" name="Is visible" sid="6438463643554353" type="Insta" />
+                <condition id="-9" name="Is visible" sid="6438463643554353" type="Facebook" />
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="7176557550627819" type="InstaNote">
-                    <param id="0" name="Text">int(InstaNote.Text)+1</param>
+                <action id="0" name="Set text" sid="7176557550627819" type="FaceNote">
+                    <param id="0" name="Text">int(FaceNote.Text)+1</param>
                 </action>
             </actions>
         </event-block>
@@ -416,17 +428,23 @@
             </conditions>
             <actions>
                 <action id="0" name="Spawn another object" sid="4600569978494808" type="Hand">
-                    <param id="0" name="Object">NotificationCall</param>
+                    <param id="0" name="Object">FaceNotification</param>
                     <param id="1" name="Layer">2</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="2933225635887027" type="NotificationCall">
+                <action id="-15" name="Set visible" sid="2933225635887027" type="FaceNotification">
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="4621719070862731" type="Facebook">
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="7932190764112253" type="FaceNote">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="756033680579863" type="Insta">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4901260178592563" type="InstaNote">
                     <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
@@ -505,6 +523,95 @@
                 </action>
                 <action id="-15" name="Set visible" sid="6407125283072249" type="TwitNotificationCall">
                     <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5946811160833561" type="Facebook">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8699627128488166" type="FaceNote">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="969838126252777">
+            <conditions>
+                <condition id="-18" name="On created" sid="3809273998393969" type="FaceNotification" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="5397290831517221" type="FaceNotification">
+                    <param id="0" name="Angle">random(0,360)</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="5981605683770132" type="FaceNotification">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6950013846601771">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8693322433524597" type="FaceNotification">
+                    <param id="0" name="Object">PhoneBoundingBox</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="3727808190280933" type="FaceNotification">
+                    <param id="0" name="Object">PhoneBoundingBox</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9425561841286737">
+            <conditions>
+                <condition id="17" name="On tap object" sid="5021937436167018" type="Touch">
+                    <param id="0" name="Object">FaceNotification</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="7294856654190396" type="System">
+                    <param id="0" name="Variable">FocusMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Phone&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="5382052468801118" type="FaceNotification" />
+            </actions>
+        </event-block>
+        <event-block sid="4352450199808054">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="4209867555392291" type="FaceNotification" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="2971342533285706" type="UIText">
+                    <param id="0" name="Text">int(UIText.Text) + 10</param>
+                </action>
+                <action id="0" name="Set text" sid="1829849100395555" type="FaceNote">
+                    <param id="0" name="Text">int(FaceNote.Text)-1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4596125407161797">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="3414446936833705" type="FaceNotification" />
+                <condition id="-21" name="Is between values" sid="3506040991674327" type="System">
+                    <param id="0" name="Value">int(FaceNote.Text)</param>
+                    <param id="1" name="Lower bound">-1000</param>
+                    <param id="2" name="Upper bound">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="5792486565644241" type="Facebook">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5028791678252241" type="FaceNote">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="8918878605850086" type="FaceNote">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6446247711054757" type="FaceNotification">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8117847423042024" type="Insta">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4079208714210547" type="InstaNote">
+                    <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
         </event-block>
