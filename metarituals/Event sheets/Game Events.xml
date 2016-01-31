@@ -221,6 +221,9 @@
                 <action id="0" name="Set text" sid="3513013800639671" type="InstaNote">
                     <param id="0" name="Text">int(InstaNote.Text)+1</param>
                 </action>
+                <action id="-15" name="Set visible" sid="7542066409469473" type="redtwit">
+                    <param id="0" name="Visibility">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="4233266389900364">
@@ -347,6 +350,9 @@
                 <action id="-15" name="Set visible" sid="8511201022461328" type="FaceNote">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="-15" name="Set visible" sid="3857734462107997" type="redtwit">
+                    <param id="0" name="Visibility">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="4502541080321943">
@@ -447,6 +453,9 @@
                 <action id="-15" name="Set visible" sid="4901260178592563" type="InstaNote">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="-15" name="Set visible" sid="376940323892071" type="redtwit">
+                    <param id="0" name="Visibility">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="2899884785154026">
@@ -529,6 +538,9 @@
                 </action>
                 <action id="-15" name="Set visible" sid="8699627128488166" type="FaceNote">
                     <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9458949766555787" type="redtwit">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
