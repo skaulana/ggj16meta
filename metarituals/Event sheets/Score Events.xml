@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Score Events</name>
+    <events>
+        <variable constant="0" name="PhoneTotalTime" sid="5466476029891695" static="0" type="number">1</variable>
+        <variable constant="0" name="LifeTotalTime" sid="9648450509061987" static="0" type="number">1</variable>
+        <event-block sid="8596837968835581">
+            <conditions>
+                <condition id="-18" name="On created" sid="7664623060611137" type="ScoreRing" />
+                <condition id="-14" name="Compare variable" sid="5065360354418003" type="System">
+                    <param id="0" name="Variable">LifeTotalTime</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">(LifeTotalTime+PhoneTotalTime)/7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="4789068251751362" type="ScoreRing">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="2" name="Stop" sid="7107793788950399" type="ScoreRing" />
+            </actions>
+        </event-block>
+        <event-block sid="133526432187744">
+            <conditions>
+                <condition id="-18" name="On created" sid="4571610761649444" type="ScoreRing" />
+                <condition id="-14" name="Compare variable" sid="7269588669284993" type="System">
+                    <param id="0" name="Variable">LifeTotalTime</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">(LifeTotalTime+PhoneTotalTime)/7</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="7529597831854399" type="System">
+                    <param id="0" name="Variable">LifeTotalTime</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">2*(LifeTotalTime+PhoneTotalTime)/7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="9185017597545302" type="ScoreRing">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="2" name="Stop" sid="8302500053318767" type="ScoreRing" />
+            </actions>
+        </event-block>
+        <event-block sid="7687291902024353">
+            <conditions>
+                <condition id="-18" name="On created" sid="6526352355881072" type="ScoreRing" />
+                <condition id="-14" name="Compare variable" sid="9912915407062279" type="System">
+                    <param id="0" name="Variable">LifeTotalTime</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">2*(LifeTotalTime+PhoneTotalTime)/7</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2602649199565517" type="System">
+                    <param id="0" name="Variable">LifeTotalTime</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">3*(LifeTotalTime+PhoneTotalTime)/7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="7969131547263803" type="ScoreRing">
+                    <param id="0" name="Frame number">2</param>
+                </action>
+                <action id="2" name="Stop" sid="7000888443812943" type="ScoreRing" />
+            </actions>
+        </event-block>
+        <event-block sid="166949303815025">
+            <conditions>
+                <condition id="-18" name="On created" sid="9101696901946656" type="ScoreRing" />
+                <condition id="-14" name="Compare variable" sid="2872148868975725" type="System">
+                    <param id="0" name="Variable">LifeTotalTime</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">3*(LifeTotalTime+PhoneTotalTime)/7</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9728673125825928" type="System">
+                    <param id="0" name="Variable">LifeTotalTime</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">4*(LifeTotalTime+PhoneTotalTime)/7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="3769825820611913" type="ScoreRing">
+                    <param id="0" name="Frame number">3</param>
+                </action>
+                <action id="2" name="Stop" sid="372822952052045" type="ScoreRing" />
+            </actions>
+        </event-block>
+        <event-block sid="4386855415452546">
+            <conditions>
+                <condition id="-18" name="On created" sid="3712792015963896" type="ScoreRing" />
+                <condition id="-14" name="Compare variable" sid="9947363158771658" type="System">
+                    <param id="0" name="Variable">LifeTotalTime</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">4*(LifeTotalTime+PhoneTotalTime)/7</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2995818029738697" type="System">
+                    <param id="0" name="Variable">LifeTotalTime</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">5*(LifeTotalTime+PhoneTotalTime)/7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="637486867048534" type="ScoreRing">
+                    <param id="0" name="Frame number">4</param>
+                </action>
+                <action id="2" name="Stop" sid="3672976925927841" type="ScoreRing" />
+            </actions>
+        </event-block>
+        <event-block sid="1969239853988144">
+            <conditions>
+                <condition id="-18" name="On created" sid="9383390470737452" type="ScoreRing" />
+                <condition id="-14" name="Compare variable" sid="9687649007674481" type="System">
+                    <param id="0" name="Variable">LifeTotalTime</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">5*(LifeTotalTime+PhoneTotalTime)/7</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="7787032819329817" type="System">
+                    <param id="0" name="Variable">LifeTotalTime</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">6*(LifeTotalTime+PhoneTotalTime)/7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="7424025860885878" type="ScoreRing">
+                    <param id="0" name="Frame number">5</param>
+                </action>
+                <action id="2" name="Stop" sid="5609075812700475" type="ScoreRing" />
+            </actions>
+        </event-block>
+        <event-block sid="5852776344718864">
+            <conditions>
+                <condition id="-18" name="On created" sid="1865067113008675" type="ScoreRing" />
+                <condition id="-14" name="Compare variable" sid="4356735810521672" type="System">
+                    <param id="0" name="Variable">LifeTotalTime</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">6*(LifeTotalTime+PhoneTotalTime)/7</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="8565796619418711" type="ScoreRing">
+                    <param id="0" name="Frame number">6</param>
+                </action>
+                <action id="2" name="Stop" sid="924181640056003" type="ScoreRing" />
+            </actions>
+        </event-block>
+        <event-block sid="1702838156496742">
+            <conditions>
+                <condition id="17" name="On tap object" sid="8947919687611175" type="Touch">
+                    <param id="0" name="Object">PhoneSmall</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="9095172076231298" type="System">
+                    <param id="0" name="Layout">Game Screen</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

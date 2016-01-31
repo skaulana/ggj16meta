@@ -30,6 +30,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Score Screen</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -237,13 +238,125 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="PhoneSmall" sid="4951651347373986">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8801617536959788" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500626" original-source="C:\Users\Sean\Desktop\iPhone-5s-Gold.png">
+                        <collision-poly>
+                            <point x="0.0552632" y="0.0262829" />
+                            <point x="0.5" y="0.00500626" />
+                            <point x="0.952632" y="0.0225282" />
+                            <point x="1" y="0.499374" />
+                            <point x="0.957895" y="0.979975" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0473684" y="0.977472" />
+                            <point x="0.0105263" y="0.499374" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ScoreRing" sid="6211458144050413">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4582478305043461" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sean\Desktop\score6-6.png">
+                        <collision-poly>
+                            <point x="0.424074" y="0.238542" />
+                            <point x="0.5" y="0.235417" />
+                            <point x="0.575" y="0.239063" />
+                            <point x="0.92037" y="0.5" />
+                            <point x="0.125" y="0.507813" />
+                            <point x="0.5" y="0.261979" />
+                            <point x="0.865741" y="0.513021" />
+                            <point x="0.0722222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sean\Desktop\score1-6.png">
+                        <collision-poly>
+                            <point x="0.424074" y="0.238542" />
+                            <point x="0.5" y="0.235417" />
+                            <point x="0.575" y="0.239063" />
+                            <point x="0.92037" y="0.5" />
+                            <point x="0.125" y="0.507813" />
+                            <point x="0.5" y="0.261979" />
+                            <point x="0.865741" y="0.513021" />
+                            <point x="0.0722222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sean\Desktop\score2-6.png">
+                        <collision-poly>
+                            <point x="0.424074" y="0.238542" />
+                            <point x="0.5" y="0.235417" />
+                            <point x="0.575" y="0.239063" />
+                            <point x="0.92037" y="0.5" />
+                            <point x="0.125" y="0.507813" />
+                            <point x="0.5" y="0.261979" />
+                            <point x="0.865741" y="0.513021" />
+                            <point x="0.0722222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sean\Desktop\score3-6.png">
+                        <collision-poly>
+                            <point x="0.424074" y="0.238542" />
+                            <point x="0.5" y="0.235417" />
+                            <point x="0.575" y="0.239063" />
+                            <point x="0.92037" y="0.5" />
+                            <point x="0.125" y="0.507813" />
+                            <point x="0.5" y="0.261979" />
+                            <point x="0.865741" y="0.513021" />
+                            <point x="0.0722222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sean\Desktop\score4-6.png">
+                        <collision-poly>
+                            <point x="0.424074" y="0.238542" />
+                            <point x="0.5" y="0.235417" />
+                            <point x="0.575" y="0.239063" />
+                            <point x="0.92037" y="0.5" />
+                            <point x="0.125" y="0.507813" />
+                            <point x="0.5" y="0.261979" />
+                            <point x="0.865741" y="0.513021" />
+                            <point x="0.0722222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sean\Desktop\score5-6.png">
+                        <collision-poly>
+                            <point x="0.424074" y="0.238542" />
+                            <point x="0.5" y="0.235417" />
+                            <point x="0.575" y="0.239063" />
+                            <point x="0.92037" y="0.5" />
+                            <point x="0.125" y="0.507813" />
+                            <point x="0.5" y="0.261979" />
+                            <point x="0.865741" y="0.513021" />
+                            <point x="0.0722222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sean\Desktop\score0-6.png">
+                        <collision-poly>
+                            <point x="0.424074" y="0.238542" />
+                            <point x="0.5" y="0.235417" />
+                            <point x="0.575" y="0.239063" />
+                            <point x="0.92037" y="0.5" />
+                            <point x="0.125" y="0.507813" />
+                            <point x="0.5" y="0.261979" />
+                            <point x="0.865741" y="0.513021" />
+                            <point x="0.0722222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Game Screen.xml</layout>
+        <layout>Score Screen.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Game Events.xml</event-sheet>
+        <event-sheet>Score Events.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Touch" uid="13">
