@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="ScoreRing" uid="21">
+                <instance type="ScoreRing" uid="13">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -51,9 +51,9 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UIText" uid="19">
+                <instance type="UIText" uid="22">
                     <properties>
-                        <text>TITLE TBD</text>
+                        <text>Reality Calling</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Garamond,-96,400,0</font>
                         <color>0,0,153</color>
@@ -66,11 +66,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>282</x>
-                        <y>690</y>
+                        <x>271</x>
+                        <y>695</y>
                         <z>0</z>
-                        <width>536</width>
-                        <height>130</height>
+                        <width>559.485473633</width>
+                        <height>135.696105957</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -78,7 +78,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PhoneSmall" uid="20">
+                <instance type="PhoneSmall" uid="23">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -96,6 +96,33 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.500625789</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="UIText" uid="25">
+                    <properties>
+                        <text>Start</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Garamond,-96,400,0</font>
+                        <color>255,255,51</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>437</x>
+                        <y>1110</y>
+                        <z>0</z>
+                        <width>232</width>
+                        <height>130</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

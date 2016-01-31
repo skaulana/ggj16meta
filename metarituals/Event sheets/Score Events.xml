@@ -3,8 +3,34 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Score Events</name>
     <events>
+        <variable constant="0" name="Score" sid="4446425206276819" static="0" type="number">-1</variable>
         <variable constant="0" name="PhoneTotalTime" sid="5466476029891695" static="0" type="number">1</variable>
         <variable constant="0" name="LifeTotalTime" sid="9648450509061987" static="0" type="number">1</variable>
+        <event-block sid="6269341974740312">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="3899419084413959" type="System" />
+                <condition id="-14" name="Compare variable" sid="5025784310178751" type="System">
+                    <param id="0" name="Variable">Score</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8692679990966761">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="5553255062825664" type="UIText">
+                            <param id="0" name="Unique ID">25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="4177695790564066" type="UIText">
+                            <param id="0" name="Text">str(int(LifeTotalTime / (PhoneTotalTime + LifeTotalTime) * 100)) &amp; &quot;%&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="8596837968835581">
             <conditions>
                 <condition id="-18" name="On created" sid="7664623060611137" type="ScoreRing" />

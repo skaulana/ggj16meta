@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game Events</name>
     <events>
+        <variable constant="0" name="Timer" sid="4443136226926945" static="0" type="number">1</variable>
         <variable constant="0" name="FocusMode" sid="9230301543912214" static="0" type="text">Phone</variable>
         <event-block sid="2076084608933646">
             <conditions>
@@ -22,6 +23,18 @@
                     <param id="0" name="Layer">0</param>
                     <param id="1" name="Mode">1</param>
                     <param id="2" name="Effect">&quot;RadialBlur&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="5154876421558493" type="System">
+                    <param id="0" name="Variable">LifeTotalTime</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="9656976945288172" type="System">
+                    <param id="0" name="Variable">PhoneTotalTime</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="299866174009866" type="System">
+                    <param id="0" name="Variable">Timer</param>
+                    <param id="1" name="Value">15</param>
                 </action>
             </actions>
         </event-block>
@@ -772,9 +785,82 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Time counter for foreground focus</comment>
         <event-block sid="5786949729453944">
-            <conditions />
-            <actions />
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6705462068048618" type="System" />
+                <condition id="-14" name="Compare variable" sid="8752022437893016" type="System">
+                    <param id="0" name="Variable">FocusMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Phone&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4925791501441028" type="System">
+                    <param id="0" name="Variable">PhoneTotalTime</param>
+                    <param id="1" name="Value">PhoneTotalTime+1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Time counter for background focus</comment>
+        <event-block sid="9357630783663242">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="4166558400918377" type="System" />
+                <condition id="-14" name="Compare variable" sid="9930568828539907" type="System">
+                    <param id="0" name="Variable">FocusMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Life&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2045857100294419" type="System">
+                    <param id="0" name="Variable">LifeTotalTime</param>
+                    <param id="1" name="Value">LifeTotalTime+1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8461171820312547">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="2812929584149056" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3312468333039561" type="System">
+                    <param id="0" name="Variable">Timer</param>
+                    <param id="1" name="Value">Timer-1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7135317783813608">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1645108201912848" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9569685344617703">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="3349213444293323" type="UIText">
+                                    <param id="0" name="Unique ID">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6517413486586677" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">UIText.Text</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="6574666067792531" type="System">
+                                    <param id="0" name="Layout">Score Screen</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
