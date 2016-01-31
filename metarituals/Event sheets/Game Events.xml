@@ -821,6 +821,12 @@
                 <action behavior="Timer" id="1" name="Stop timer" sid="7698591607949347" type="yarnball">
                     <param id="0" name="Tag">&quot;yarnTimer&quot;</param>
                 </action>
+                <action id="0" name="Play" sid="2537778391213304" type="Audio">
+                    <param id="0" name="Audio file">clickonYarnball</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">50</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="9819715071219635">
@@ -1025,6 +1031,12 @@
                 <action id="-15" name="Set visible" sid="986850033670219" type="Cata">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="0" name="Play" sid="9605709478065849" type="Audio">
+                    <param id="0" name="Audio file">catAppears</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">50</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="2213076964288984">
@@ -1066,7 +1078,14 @@
                     <param id="0" name="Object">yarnball</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Play" sid="5586549184163552" type="Audio">
+                    <param id="0" name="Audio file">clickonYarnball</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">50</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="589216214854373">
                     <conditions>

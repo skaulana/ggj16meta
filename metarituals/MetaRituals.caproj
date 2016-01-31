@@ -621,6 +621,10 @@
     <sounds-folder>
         <file name="alert_49.m4a" />
         <file name="alert_49.ogg" />
+        <file name="catAppears.m4a" />
+        <file name="catAppears.ogg" />
+        <file name="clickonYarnball.m4a" />
+        <file name="clickonYarnball.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
