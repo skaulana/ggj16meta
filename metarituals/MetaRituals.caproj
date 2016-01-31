@@ -430,7 +430,6 @@
                             <point x="0.5" y="0.968338" />
                             <point x="0.12" y="0.841689" />
                             <point x="0" y="0.498681" />
-
                         </collision-poly>
                     </frame>
                 </animation>
@@ -455,7 +454,6 @@
         <object-type name="TimerText" sid="5313607387044013">
             <plugin id="Text" />
         </object-type>
->>>>>>> d081b1c06db111133f75f74267388ab680b4a1d5
     </object-folder>
     <families />
     <layout-folder>
