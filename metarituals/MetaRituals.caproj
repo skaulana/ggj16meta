@@ -451,6 +451,9 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TimerText" sid="5313607387044013">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

@@ -179,8 +179,7 @@
                 </action>
             </actions>
         </event-block>
-        <comment>Game over if notifications swamp your phone?</comment>
-        <event-block sid="3637171324403918">
+        <event-block disabled="1" sid="3637171324403918">
             <conditions>
                 <condition id="-8" name="Compare two values" sid="2788357246427832" type="System">
                     <param id="0" name="First value">NotificationCall.Count</param>
@@ -837,6 +836,9 @@
                 <action id="-9" name="Set value" sid="3312468333039561" type="System">
                     <param id="0" name="Variable">Timer</param>
                     <param id="1" name="Value">Timer-1</param>
+                </action>
+                <action id="0" name="Set text" sid="897914990728693" type="TimerText">
+                    <param id="0" name="Text">&quot;Time: &quot; &amp; Timer</param>
                 </action>
             </actions>
             <sub-events>
