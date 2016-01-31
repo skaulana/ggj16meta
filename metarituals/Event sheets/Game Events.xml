@@ -51,7 +51,8 @@
                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="1802869051595476" type="Kitty">
                     <param id="0" name="Angle">180</param>
                 </action>
-                <action id="-25" name="Move to bottom" sid="7038681926805997" type="Kitty" />
+                <action id="-24" name="Move to top" sid="7038681926805997" type="Kitty" />
+                <action id="-24" name="Move to top" sid="3933772557501605" type="yarnball" />
             </actions>
         </event-block>
         <event-block sid="749066788007623">
