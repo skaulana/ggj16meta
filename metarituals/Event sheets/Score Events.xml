@@ -24,8 +24,32 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Set text" sid="9614335467146255" type="UIText">
+                            <param id="0" name="Text">Score</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1697085147671207">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="4954335651718238" type="UIText">
+                            <param id="0" name="Unique ID">29</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="9840327922384056" type="UIText">
+                            <param id="0" name="Text">&quot;points&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="717219098779667">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="9019426544880976" type="UIText">
+                            <param id="0" name="Unique ID">25</param>
+                        </condition>
+                    </conditions>
+                    <actions>
                         <action id="0" name="Set text" sid="4177695790564066" type="UIText">
-                            <param id="0" name="Text">str(int(LifeTotalTime / (PhoneTotalTime + LifeTotalTime) * 100)) &amp; &quot;%&quot;</param>
+                            <param id="0" name="Text">str(int(LifeTotalTime / (PhoneTotalTime + LifeTotalTime) * 100)) &amp; &quot;% real&quot;</param>
                         </action>
                     </actions>
                 </event-block>
