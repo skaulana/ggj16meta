@@ -17,6 +17,8 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="radialblur">Radial blur</effect>
@@ -30,6 +32,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Score Screen</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -111,6 +114,9 @@
             <behaviors>
                 <behavior-type name="Bullet" sid="5871144107629822">
                     <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="8723485987812606">
+                    <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -256,6 +262,116 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="ScoreRing" sid="6211458144050413">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4582478305043461" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sean\Desktop\score6-6.png">
+                        <collision-poly>
+                            <point x="0.424074" y="0.238542" />
+                            <point x="0.5" y="0.235417" />
+                            <point x="0.575" y="0.239063" />
+                            <point x="0.92037" y="0.5" />
+                            <point x="0.125" y="0.507813" />
+                            <point x="0.5" y="0.261979" />
+                            <point x="0.865741" y="0.513021" />
+                            <point x="0.0722222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sean\Desktop\score1-6.png">
+                        <collision-poly>
+                            <point x="0.424074" y="0.238542" />
+                            <point x="0.5" y="0.235417" />
+                            <point x="0.575" y="0.239063" />
+                            <point x="0.92037" y="0.5" />
+                            <point x="0.125" y="0.507813" />
+                            <point x="0.5" y="0.261979" />
+                            <point x="0.865741" y="0.513021" />
+                            <point x="0.0722222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sean\Desktop\score2-6.png">
+                        <collision-poly>
+                            <point x="0.424074" y="0.238542" />
+                            <point x="0.5" y="0.235417" />
+                            <point x="0.575" y="0.239063" />
+                            <point x="0.92037" y="0.5" />
+                            <point x="0.125" y="0.507813" />
+                            <point x="0.5" y="0.261979" />
+                            <point x="0.865741" y="0.513021" />
+                            <point x="0.0722222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sean\Desktop\score3-6.png">
+                        <collision-poly>
+                            <point x="0.424074" y="0.238542" />
+                            <point x="0.5" y="0.235417" />
+                            <point x="0.575" y="0.239063" />
+                            <point x="0.92037" y="0.5" />
+                            <point x="0.125" y="0.507813" />
+                            <point x="0.5" y="0.261979" />
+                            <point x="0.865741" y="0.513021" />
+                            <point x="0.0722222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sean\Desktop\score4-6.png">
+                        <collision-poly>
+                            <point x="0.424074" y="0.238542" />
+                            <point x="0.5" y="0.235417" />
+                            <point x="0.575" y="0.239063" />
+                            <point x="0.92037" y="0.5" />
+                            <point x="0.125" y="0.507813" />
+                            <point x="0.5" y="0.261979" />
+                            <point x="0.865741" y="0.513021" />
+                            <point x="0.0722222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sean\Desktop\score5-6.png">
+                        <collision-poly>
+                            <point x="0.424074" y="0.238542" />
+                            <point x="0.5" y="0.235417" />
+                            <point x="0.575" y="0.239063" />
+                            <point x="0.92037" y="0.5" />
+                            <point x="0.125" y="0.507813" />
+                            <point x="0.5" y="0.261979" />
+                            <point x="0.865741" y="0.513021" />
+                            <point x="0.0722222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sean\Desktop\score0-6.png">
+                        <collision-poly>
+                            <point x="0.424074" y="0.238542" />
+                            <point x="0.5" y="0.235417" />
+                            <point x="0.575" y="0.239063" />
+                            <point x="0.92037" y="0.5" />
+                            <point x="0.125" y="0.507813" />
+                            <point x="0.5" y="0.261979" />
+                            <point x="0.865741" y="0.513021" />
+                            <point x="0.0722222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PhoneSmall" sid="4951651347373986">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8801617536959788" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500626" original-source="C:\Users\Sean\Desktop\iPhone-5s-Gold.png">
+                        <collision-poly>
+                            <point x="0.0552632" y="0.0262829" />
+                            <point x="0.5" y="0.00500626" />
+                            <point x="0.952632" y="0.0225282" />
+                            <point x="1" y="0.499374" />
+                            <point x="0.957895" y="0.979975" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0473684" y="0.977472" />
+                            <point x="0.0105263" y="0.499374" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="redface" sid="1168623810230299">
             <plugin id="Sprite" />
             <animation-folder>
@@ -292,35 +408,66 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="minus50" sid="7594859000076088">
+        <object-type name="yarnball" sid="6801516152336077">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="4416894608275325">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="8951494314666096">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2168359805420616" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rach\Downloads\dislike2.png">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="118161771682901" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501319" original-source="C:\Users\Shweta\Pictures\yarn-yellow.png">
                         <collision-poly>
-                            <point x="0.128906" y="0.128906" />
-                            <point x="0.5" y="0.078125" />
-                            <point x="0.880859" y="0.119141" />
-                            <point x="0.990234" y="0.5" />
-                            <point x="0.78125" y="0.78125" />
-                            <point x="0.5" y="0.8125" />
-                            <point x="0.291016" y="0.708984" />
-                            <point x="0" y="0.5" />
+                            <point x="0.112" y="0.147757" />
+                            <point x="0.5" y="0.0158311" />
+                            <point x="0.77" y="0.30343" />
+                            <point x="0.802" y="0.498681" />
+                            <point x="0.982" y="0.976253" />
+                            <point x="0.5" y="0.968338" />
+                            <point x="0.12" y="0.841689" />
+                            <point x="0" y="0.498681" />
+
                         </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="yarnBoundBox_Left" sid="72738684041309">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2939813979544362" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="yarnBound_Right" sid="5757225222893804">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6193942330727768" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TimerText" sid="5313607387044013">
+            <plugin id="Text" />
+        </object-type>
+>>>>>>> d081b1c06db111133f75f74267388ab680b4a1d5
     </object-folder>
     <families />
     <layout-folder>
         <layout>Game Screen.xml</layout>
+        <layout>Score Screen.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Game Events.xml</event-sheet>
+        <event-sheet>Score Events.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Touch" uid="13">
+        <global-instance type="Touch" uid="28">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>

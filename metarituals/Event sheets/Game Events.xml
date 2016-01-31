@@ -3,6 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game Events</name>
     <events>
+        <variable constant="0" name="Timer" sid="4443136226926945" static="0" type="number">1</variable>
+        <variable constant="0" name="yarnAngle" sid="7541300717804049" static="0" type="number">0</variable>
+        <variable constant="0" name="kittyAngle" sid="9682827841338758" static="0" type="number">180</variable>
         <variable constant="0" name="FocusMode" sid="9230301543912214" static="0" type="text">Phone</variable>
         <event-block sid="2076084608933646">
             <conditions>
@@ -22,6 +25,24 @@
                     <param id="0" name="Layer">0</param>
                     <param id="1" name="Mode">1</param>
                     <param id="2" name="Effect">&quot;RadialBlur&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="5154876421558493" type="System">
+                    <param id="0" name="Variable">LifeTotalTime</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="9656976945288172" type="System">
+                    <param id="0" name="Variable">PhoneTotalTime</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="299866174009866" type="System">
+                    <param id="0" name="Variable">Timer</param>
+                    <param id="1" name="Value">15</param>
+                </action>
+                <action id="-9" name="Destroy" sid="6851370606595526" type="BigKitty" />
+                <action behavior="Timer" id="0" name="Start timer" sid="2585205367754184" type="yarnball">
+                    <param id="0" name="Duration">5</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;yarnTimer&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -163,8 +184,7 @@
                 </action>
             </actions>
         </event-block>
-        <comment>Game over if notifications swamp your phone?</comment>
-        <event-block sid="3637171324403918">
+        <event-block disabled="1" sid="3637171324403918">
             <conditions>
                 <condition id="-8" name="Compare two values" sid="2788357246427832" type="System">
                     <param id="0" name="First value">NotificationCall.Count</param>
@@ -228,29 +248,27 @@
         </event-block>
         <event-block sid="4233266389900364">
             <conditions>
-                <condition id="-3" inverted="1" name="Is on-screen" sid="4659029505387119" type="Kitty" />
+                <condition disabled="1" id="-3" inverted="1" name="Is on-screen" sid="4659029505387119" type="Kitty" />
             </conditions>
             <actions>
-                <action id="-9" name="Destroy" sid="7609355734808052" type="Kitty" />
-                <action id="-16" name="Wait" sid="6321797710899625" type="System">
-                    <param id="0" name="Seconds">100</param>
+                <action disabled="1" id="-9" name="Destroy" sid="7609355734808052" type="Kitty" />
+                <action disabled="1" id="-16" name="Wait" sid="6321797710899625" type="System">
+                    <param id="0" name="Seconds">4</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="3212723169990816">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="2487618298964698" type="yarnball">
+                    <param id="0" name="Tag">&quot;yarnTimer&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
                 <action id="-3" name="Create object" sid="8174818443313231" type="System">
                     <param id="0" name="Object to create">BigKitty</param>
                     <param id="1" name="Layer">3</param>
                     <param id="2" name="X">500</param>
                     <param id="3" name="Y">2200</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="2749777702054123">
-            <conditions>
-                <condition id="-18" name="On created" sid="1474484364300037" type="BigKitty" />
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="1057326029832346" type="BigKitty">
-                    <param id="0" name="Instance variable">Taps</param>
-                    <param id="1" name="Value">20 + random(0,10)</param>
                 </action>
             </actions>
         </event-block>
@@ -281,10 +299,6 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="5620428936407687" type="BigKitty">
-                    <param id="0" name="Instance variable">Taps</param>
-                    <param id="1" name="Value">BigKitty.Taps - 1</param>
-                </action>
                 <action id="-23" name="Move at angle" sid="894903237893221" type="BigKitty">
                     <param id="0" name="Angle">90</param>
                     <param id="1" name="Distance">250</param>
@@ -293,24 +307,34 @@
         </event-block>
         <event-block sid="8386813616876731">
             <conditions>
-                <condition id="-7" name="Compare instance variable" sid="126891773645475" type="BigKitty">
-                    <param id="0" name="Instance variable">Taps</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0</param>
+                <condition id="17" name="On tap object" sid="755298858856945" type="Touch">
+                    <param id="0" name="Object">yarnball</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="1112679380139853" type="BigKitty" />
-                <action id="-16" name="Wait" sid="9624002472673879" type="System">
-                    <param id="0" name="Seconds">3</param>
-                </action>
-                <action id="-3" name="Create object" sid="5628084918255715" type="System">
-                    <param id="0" name="Object to create">Kitty</param>
-                    <param id="1" name="Layer">0</param>
-                    <param id="2" name="X">1100</param>
-                    <param id="3" name="Y">400</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="2898674965967032">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="6847690106146923" type="System">
+                            <param id="0" name="First value">BigKitty.Count</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="1112679380139853" type="BigKitty" />
+                        <action id="-16" name="Wait" sid="9624002472673879" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5628084918255715" type="System">
+                            <param id="0" name="Object to create">Kitty</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">1100</param>
+                            <param id="3" name="Y">400</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="6595362664106802">
             <conditions>
@@ -772,9 +796,173 @@
                 </action>
             </actions>
         </event-block>
+        <comment>Time counter for foreground focus</comment>
         <event-block sid="5786949729453944">
-            <conditions />
-            <actions />
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6705462068048618" type="System" />
+                <condition id="-14" name="Compare variable" sid="5568536012675333" type="System">
+                    <param id="0" name="Variable">FocusMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Phone&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4925791501441028" type="System">
+                    <param id="0" name="Variable">PhoneTotalTime</param>
+                    <param id="1" name="Value">PhoneTotalTime+1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Time counter for background focus</comment>
+        <event-block sid="9357630783663242">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="4166558400918377" type="System" />
+                <condition id="-14" name="Compare variable" sid="9930568828539907" type="System">
+                    <param id="0" name="Variable">FocusMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Life&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2045857100294419" type="System">
+                    <param id="0" name="Variable">LifeTotalTime</param>
+                    <param id="1" name="Value">LifeTotalTime+1</param>
+                </action>
+            </actions>
+        </event-block>
+        <comment>Main game timer/game end condition</comment>
+        <event-block sid="8461171820312547">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="2812929584149056" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3312468333039561" type="System">
+                    <param id="0" name="Variable">Timer</param>
+                    <param id="1" name="Value">Timer-1</param>
+                </action>
+                <action id="0" name="Set text" sid="897914990728693" type="TimerText">
+                    <param id="0" name="Text">&quot;Time: &quot; &amp; Timer</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="7135317783813608">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="1645108201912848" type="System">
+                            <param id="0" name="Variable">Timer</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9569685344617703">
+                            <conditions>
+                                <condition id="-14" name="Pick by unique ID" sid="3349213444293323" type="UIText">
+                                    <param id="0" name="Unique ID">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="6517413486586677" type="System">
+                                    <param id="0" name="Variable">Score</param>
+                                    <param id="1" name="Value">UIText.Text</param>
+                                </action>
+                                <action id="-2" name="Go to layout" sid="6574666067792531" type="System">
+                                    <param id="0" name="Layout">Score Screen</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9069958576184421">
+            <conditions>
+                <condition id="17" name="On tap object" sid="4300634093033076" type="Touch">
+                    <param id="0" name="Object">yarnball</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="7704072653940312" type="System">
+                    <param id="0" name="Variable">FocusMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Life&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="4368756916489897" type="yarnball">
+                    <param id="0" name="Speed">random(700, 1500)</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="2354382578548526" type="yarnball">
+                    <param id="0" name="Angle">yarnAngle</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="7698591607949347" type="yarnball">
+                    <param id="0" name="Duration">5</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;yarnTimer&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9819715071219635">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3929057506916661" type="yarnball">
+                    <param id="0" name="Object">yarnBound_Right</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2226362769871882" type="System">
+                    <param id="0" name="Variable">yarnAngle</param>
+                    <param id="1" name="Value">180</param>
+                </action>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="8024165867456454" type="yarnball">
+                    <param id="0" name="Object">yarnBound_Right</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6734017150566516">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5734251427735613" type="yarnball">
+                    <param id="0" name="Object">yarnBoundBox_Left</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3658040224214762" type="System">
+                    <param id="0" name="Variable">yarnAngle</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="2355482791070532" type="yarnball">
+                    <param id="0" name="Object">yarnBoundBox_Left</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5723896496847185">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6612485939494065" type="Kitty">
+                    <param id="0" name="Object">yarnBoundBox_Left</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="3056990777514336" type="Kitty">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="5830684224702465" type="Kitty">
+                    <param id="0" name="Object">yarnBoundBox_Left</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7964214583584098">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7662941452556575" type="Kitty">
+                    <param id="0" name="Object">yarnBound_Right</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="7417070564286916" type="Kitty">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="9783882786205999" type="Kitty">
+                    <param id="0" name="Object">yarnBound_Right</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
