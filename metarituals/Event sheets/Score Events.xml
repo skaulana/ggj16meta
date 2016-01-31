@@ -20,7 +20,7 @@
                 <event-block sid="8692679990966761">
                     <conditions>
                         <condition id="-14" name="Pick by unique ID" sid="5553255062825664" type="UIText">
-                            <param id="0" name="Unique ID">25</param>
+                            <param id="0" name="Unique ID">27</param>
                         </condition>
                     </conditions>
                     <actions>
