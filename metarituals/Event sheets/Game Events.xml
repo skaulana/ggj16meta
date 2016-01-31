@@ -5,6 +5,7 @@
     <events>
         <variable constant="0" name="Timer" sid="4443136226926945" static="0" type="number">1</variable>
         <variable constant="0" name="yarnAngle" sid="7541300717804049" static="0" type="number">0</variable>
+        <variable constant="0" name="kittyAngle" sid="9682827841338758" static="0" type="number">180</variable>
         <variable constant="0" name="FocusMode" sid="9230301543912214" static="0" type="text">Phone</variable>
         <event-block sid="2076084608933646">
             <conditions>
@@ -35,12 +36,14 @@
                 </action>
                 <action id="-9" name="Set value" sid="299866174009866" type="System">
                     <param id="0" name="Variable">Timer</param>
-                    <param id="1" name="Value">60</param>
-                </action>
-                <action id="0" name="Set text" sid="1118083357607806" type="TimerText">
-                    <param id="0" name="Text">&quot;Time: &quot; &amp; Timer</param>
+                    <param id="1" name="Value">15</param>
                 </action>
                 <action id="-9" name="Destroy" sid="6851370606595526" type="BigKitty" />
+                <action behavior="Timer" id="0" name="Start timer" sid="2585205367754184" type="yarnball">
+                    <param id="0" name="Duration">5</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;yarnTimer&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="2218747031618236">
@@ -51,7 +54,6 @@
                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="1802869051595476" type="Kitty">
                     <param id="0" name="Angle">180</param>
                 </action>
-                <action id="-25" name="Move to bottom" sid="7038681926805997" type="Kitty" />
             </actions>
         </event-block>
         <event-block sid="749066788007623">
@@ -195,7 +197,7 @@
             </actions>
         </event-block>
         <comment>Steady score increase by focusing on life</comment>
-        <event-block disabled="1" sid="5204467237711053">
+        <event-block sid="5204467237711053">
             <conditions>
                 <condition id="-1" name="Every tick" sid="1366797422326962" type="System" />
                 <condition id="-14" name="Compare variable" sid="8267737726330184" type="System">
@@ -231,7 +233,7 @@
         <event-block sid="7051095369005591">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="3086882824346712" type="System">
-                    <param id="0" name="Interval (seconds)">2.0</param>
+                    <param id="0" name="Interval (seconds)">1.25</param>
                 </condition>
                 <condition id="-9" name="Is visible" sid="7121864311088436" type="Insta" />
             </conditions>
@@ -243,6 +245,96 @@
                     <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="4233266389900364">
+            <conditions>
+                <condition disabled="1" id="-3" inverted="1" name="Is on-screen" sid="4659029505387119" type="Kitty" />
+            </conditions>
+            <actions>
+                <action disabled="1" id="-9" name="Destroy" sid="7609355734808052" type="Kitty" />
+                <action disabled="1" id="-16" name="Wait" sid="6321797710899625" type="System">
+                    <param id="0" name="Seconds">4</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3212723169990816">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="2487618298964698" type="yarnball">
+                    <param id="0" name="Tag">&quot;yarnTimer&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="8174818443313231" type="System">
+                    <param id="0" name="Object to create">BigKitty</param>
+                    <param id="1" name="Layer">3</param>
+                    <param id="2" name="X">500</param>
+                    <param id="3" name="Y">2200</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8640191733858953">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="223946112553209" type="System" />
+                <condition id="-8" name="Compare two values" sid="6136143258274861" type="System">
+                    <param id="0" name="First value">BigKitty.Count</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
+                <condition id="-2" name="Compare Y" sid="3336006643986715" type="BigKitty">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="Y co-ordinate">1500</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="4301805255041481" type="BigKitty">
+                    <param id="0" name="Angle">270</param>
+                    <param id="1" name="Distance">15</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4994931080639707">
+            <conditions>
+                <condition id="17" name="On tap object" sid="4249251669165353" type="Touch">
+                    <param id="0" name="Object">BigKitty</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-23" name="Move at angle" sid="894903237893221" type="BigKitty">
+                    <param id="0" name="Angle">90</param>
+                    <param id="1" name="Distance">250</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8386813616876731">
+            <conditions>
+                <condition id="17" name="On tap object" sid="755298858856945" type="Touch">
+                    <param id="0" name="Object">yarnball</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2898674965967032">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="6847690106146923" type="System">
+                            <param id="0" name="First value">BigKitty.Count</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="1112679380139853" type="BigKitty" />
+                        <action id="-16" name="Wait" sid="9624002472673879" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-3" name="Create object" sid="5628084918255715" type="System">
+                            <param id="0" name="Object to create">Kitty</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">1100</param>
+                            <param id="3" name="Y">400</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="6595362664106802">
             <conditions>
@@ -340,7 +432,7 @@
         <event-block sid="3590076730017712">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="481199909279386" type="System">
-                    <param id="0" name="Interval (seconds)">3.0</param>
+                    <param id="0" name="Interval (seconds)">2</param>
                 </condition>
                 <condition id="-9" name="Is visible" sid="6438463643554353" type="Facebook" />
             </conditions>
@@ -392,9 +484,6 @@
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="9307804388278496" type="redface">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="8607111283237262" type="AddTen">
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="2699492624156169" type="redtwit">
@@ -453,15 +542,6 @@
                 <action id="0" name="Set text" sid="7000613172571576" type="InstaNote">
                     <param id="0" name="Text">int(InstaNote.Text)-1</param>
                 </action>
-                <action id="-15" name="Set visible" sid="7246814228344879" type="AddTen">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-16" name="Wait" sid="6787642330031352" type="System">
-                    <param id="0" name="Seconds">0.2</param>
-                </action>
-                <action id="-15" name="Set visible" sid="3713299257190776" type="AddTen">
-                    <param id="0" name="Visibility">0</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="299225017864722">
@@ -493,15 +573,6 @@
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="9458949766555787" type="redtwit">
-                    <param id="0" name="Visibility">0</param>
-                </action>
-                <action id="-15" name="Set visible" sid="5312592343845635" type="AddTen">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-16" name="Wait" sid="7801565128033595" type="System">
-                    <param id="0" name="Seconds">0.2</param>
-                </action>
-                <action id="-15" name="Set visible" sid="410594720822514" type="AddTen">
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="5058738949416065" type="redface">
@@ -560,15 +631,6 @@
                 <action id="0" name="Set text" sid="1829849100395555" type="FaceNote">
                     <param id="0" name="Text">int(FaceNote.Text)-1</param>
                 </action>
-                <action id="-15" name="Set visible" sid="2747054259181894" type="AddTen">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-16" name="Wait" sid="1107592742591962" type="System">
-                    <param id="0" name="Seconds">0.2</param>
-                </action>
-                <action id="-15" name="Set visible" sid="7999001417804156" type="AddTen">
-                    <param id="0" name="Visibility">0</param>
-                </action>
             </actions>
         </event-block>
         <event-block sid="4596125407161797">
@@ -604,15 +666,6 @@
                 </action>
                 <action id="-15" name="Set visible" sid="3305835317967347" type="redtwit">
                     <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-15" name="Set visible" sid="2065524840338953" type="AddTen">
-                    <param id="0" name="Visibility">1</param>
-                </action>
-                <action id="-16" name="Wait" sid="429223778257665" type="System">
-                    <param id="0" name="Seconds">0.2</param>
-                </action>
-                <action id="-15" name="Set visible" sid="9266441580281678" type="AddTen">
-                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
@@ -803,8 +856,10 @@
                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="2354382578548526" type="yarnball">
                     <param id="0" name="Angle">yarnAngle</param>
                 </action>
-                <action behavior="Timer" id="1" name="Stop timer" sid="7698591607949347" type="yarnball">
-                    <param id="0" name="Tag">&quot;yarnTimer&quot;</param>
+                <action behavior="Timer" id="0" name="Start timer" sid="7698591607949347" type="yarnball">
+                    <param id="0" name="Duration">5</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;yarnTimer&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -840,232 +895,35 @@
                 </action>
             </actions>
         </event-block>
-        <comment>Kitty follows the ball while it&apos;s moving</comment>
-        <event-block sid="3621556222726629">
+        <event-block sid="5723896496847185">
             <conditions>
-                <condition id="-6" name="Every X seconds" sid="3275491624743321" type="System">
-                    <param id="0" name="Interval (seconds)">0.5</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="399059528495712">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="7029524200460409" type="System">
-                            <param id="0" name="First value">Kitty.X</param>
-                            <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Second value">yarnball.X</param>
-                        </condition>
-                        <condition behavior="Bullet" id="0" name="Compare speed" sid="7726256824685796" type="yarnball">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Speed">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="3056990777514336" type="Kitty">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="6463496976583477" type="Kitty">
-                            <param id="0" name="Animation">&quot;Run&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="9973016683980747" type="Kitty">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="7282723437445417" type="Kitty">
-                            <param id="0" name="Angle">0</param>
-                        </action>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="685870801543312" type="Kitty">
-                            <param id="0" name="Speed">200</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3673043978708235">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="3225939474316445" type="System">
-                            <param id="0" name="First value">Kitty.X</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">yarnball.X</param>
-                        </condition>
-                        <condition behavior="Bullet" id="0" name="Compare speed" sid="4871858986770931" type="yarnball">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="Speed">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="3044933279837588" type="Kitty">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="3549126560940621" type="Kitty">
-                            <param id="0" name="Animation">&quot;Run&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="2254380383027582" type="Kitty">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="5892789301980147" type="Kitty">
-                            <param id="0" name="Angle">180</param>
-                        </action>
-                        <action behavior="Bullet" id="0" name="Set speed" sid="5414892233177495" type="Kitty">
-                            <param id="0" name="Speed">200</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <comment>Kitty waits a few seconds after yarn ball stops</comment>
-        <event-block sid="4877768147057067">
-            <conditions>
-                <condition behavior="Bullet" id="0" name="Compare speed" sid="8144426328586955" type="yarnball">
-                    <param id="0" name="Comparison">0</param>
-                    <param id="1" name="Speed">0</param>
-                </condition>
-                <condition id="2" name="Is playing" sid="5511392903398786" type="Kitty">
-                    <param id="0" name="Animation">&quot;Run&quot;</param>
-                </condition>
-                <condition behavior="Bullet" id="0" name="Compare speed" sid="8876728618818268" type="Kitty">
-                    <param id="0" name="Comparison">2</param>
-                    <param id="1" name="Speed">500</param>
+                <condition id="0" name="On collision with another object" sid="6612485939494065" type="Kitty">
+                    <param id="0" name="Object">yarnBoundBox_Left</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Timer" id="0" name="Start timer" sid="7329946164895237" type="yarnball">
-                    <param id="0" name="Duration">5</param>
-                    <param id="1" name="Type">0</param>
-                    <param id="2" name="Tag">&quot;yarnTimer&quot;</param>
-                </action>
-                <action behavior="Bullet" id="5" name="Set enabled" sid="9192781654056933" type="Kitty">
+                <action id="7" name="Set mirrored" sid="3056990777514336" type="Kitty">
                     <param id="0" name="State">0</param>
                 </action>
-                <action id="4" name="Set animation" sid="1099926448024066" type="Kitty">
-                    <param id="0" name="Animation">&quot;Sit&quot;</param>
-                    <param id="1" name="From">1</param>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="5830684224702465" type="Kitty">
+                    <param id="0" name="Object">yarnBoundBox_Left</param>
                 </action>
             </actions>
         </event-block>
-        <event-block sid="3239422382921163">
+        <event-block sid="7964214583584098">
             <conditions>
-                <condition id="2" name="Is playing" sid="4354484695371478" type="Kitty">
-                    <param id="0" name="Animation">&quot;Sit&quot;</param>
-                </condition>
-                <condition id="3" name="Compare frame" sid="626174100906707" type="Kitty">
-                    <param id="0" name="Comparison">0</param>
-                    <param id="1" name="Number">2</param>
+                <condition id="0" name="On collision with another object" sid="7662941452556575" type="Kitty">
+                    <param id="0" name="Object">yarnBound_Right</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="2" name="Stop" sid="180952581580901" type="Kitty" />
-            </actions>
-        </event-block>
-        <comment>Kitty comes to annoy you</comment>
-        <event-block sid="9244624749478125">
-            <conditions>
-                <condition behavior="Timer" id="0" name="On timer" sid="3396396434384634" type="yarnball">
-                    <param id="0" name="Tag">&quot;yarnTimer&quot;</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="7" name="Set mirrored" sid="8991216326513835" type="Kitty">
-                    <param id="0" name="State">0</param>
-                </action>
-                <action id="4" name="Set animation" sid="8410712613208773" type="Kitty">
-                    <param id="0" name="Animation">&quot;Run&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action behavior="Bullet" id="5" name="Set enabled" sid="2669694031416662" type="Kitty">
+                <action id="7" name="Set mirrored" sid="7417070564286916" type="Kitty">
                     <param id="0" name="State">1</param>
                 </action>
-                <action behavior="Bullet" id="3" name="Set angle of motion" sid="5200549673100725" type="Kitty">
-                    <param id="0" name="Angle">0</param>
-                </action>
-                <action behavior="Bullet" id="0" name="Set speed" sid="6359910266243111" type="Kitty">
-                    <param id="0" name="Speed">800</param>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="9783882786205999" type="Kitty">
+                    <param id="0" name="Object">yarnBound_Right</param>
                 </action>
             </actions>
-        </event-block>
-        <event-block sid="6791633192647158">
-            <conditions>
-                <condition id="-3" inverted="1" name="Is on-screen" sid="3240074203782338" type="Kitty" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="1327165761497314" type="Kitty" />
-                <action id="-16" name="Wait" sid="4432169166128118" type="System">
-                    <param id="0" name="Seconds">2</param>
-                </action>
-                <action id="-3" name="Create object" sid="5678390288587397" type="System">
-                    <param id="0" name="Object to create">BigKitty</param>
-                    <param id="1" name="Layer">3</param>
-                    <param id="2" name="X">500</param>
-                    <param id="3" name="Y">2200</param>
-                </action>
-                <action id="0" name="Set text" sid="4111227816129875" type="UIText">
-                    <param id="0" name="Text">int(UIText.Text) - 50</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="2213076964288984">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="3280902243311663" type="System" />
-                <condition id="-8" name="Compare two values" sid="2148881588238128" type="System">
-                    <param id="0" name="First value">BigKitty.Count</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Second value">0</param>
-                </condition>
-                <condition id="-2" name="Compare Y" sid="9927727236208613" type="BigKitty">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="Y co-ordinate">1500</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-23" name="Move at angle" sid="4502252847496665" type="BigKitty">
-                    <param id="0" name="Angle">270</param>
-                    <param id="1" name="Distance">15</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="7946473418025675">
-            <conditions>
-                <condition id="17" name="On tap object" sid="1419827049694219" type="Touch">
-                    <param id="0" name="Object">BigKitty</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-23" name="Move at angle" sid="5391090654722253" type="BigKitty">
-                    <param id="0" name="Angle">90</param>
-                    <param id="1" name="Distance">250</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="1927645496214982">
-            <conditions>
-                <condition id="17" name="On tap object" sid="2250480237041008" type="Touch">
-                    <param id="0" name="Object">yarnball</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="589216214854373">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="5118032422359442" type="System">
-                            <param id="0" name="First value">BigKitty.Count</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="4886015255643052" type="BigKitty" />
-                        <action id="-16" name="Wait" sid="389628492463295" type="System">
-                            <param id="0" name="Seconds">2</param>
-                        </action>
-                        <action id="-3" name="Create object" sid="9860417080832076" type="System">
-                            <param id="0" name="Object to create">Kitty</param>
-                            <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">1100</param>
-                            <param id="3" name="Y">400</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
