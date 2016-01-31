@@ -51,7 +51,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UIText" uid="22">
+                <instance type="UIText" uid="25">
                     <properties>
                         <text>Reality Calling</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -78,7 +78,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PhoneSmall" uid="23">
+                <instance type="PhoneSmall" uid="26">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -100,7 +100,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="UIText" uid="25">
+                <instance type="UIText" uid="27">
                     <properties>
                         <text>Start</text>
                         <initial-visibility>Visible</initial-visibility>
