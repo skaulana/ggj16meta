@@ -952,7 +952,7 @@
             </conditions>
             <actions>
                 <action behavior="Timer" id="0" name="Start timer" sid="7329946164895237" type="yarnball">
-                    <param id="0" name="Duration">5</param>
+                    <param id="0" name="Duration">3</param>
                     <param id="1" name="Type">0</param>
                     <param id="2" name="Tag">&quot;yarnTimer&quot;</param>
                 </action>

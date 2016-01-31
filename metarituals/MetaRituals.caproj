@@ -105,7 +105,7 @@
         </object-type>
         <object-type name="PhoneScreen" sid="3028156690312282">
             <plugin id="TiledBg" />
-            <texture />
+            <texture original-source="C:\Users\Sean\Desktop\phoneback.jpg" />
         </object-type>
         <object-type name="Insta" sid="4166388305269404">
             <plugin id="Sprite" />
@@ -602,7 +602,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="797840083236417" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sean\Desktop\cloudback.jpg" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sean\Desktop\meadow2.jpg" />
                 </animation>
             </animation-folder>
         </object-type>
