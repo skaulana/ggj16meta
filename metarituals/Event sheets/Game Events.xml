@@ -328,11 +328,11 @@
             </conditions>
             <actions>
                 <action id="0" name="Spawn another object" sid="5710745814120558" type="Hand">
-                    <param id="0" name="Object">NotificationCall</param>
+                    <param id="0" name="Object">TwitNotificationCall</param>
                     <param id="1" name="Layer">2</param>
                     <param id="2" name="Image point">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="8446218585611682" type="NotificationCall">
+                <action id="-15" name="Set visible" sid="8446218585611682" type="TwitNotificationCall">
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="9244700321857086" type="Insta">
@@ -380,6 +380,130 @@
                     <param id="0" name="Text">&quot;&quot;</param>
                 </action>
                 <action id="-15" name="Set visible" sid="6450882986668545" type="NotificationCall">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3590076730017712">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="481199909279386" type="System">
+                    <param id="0" name="Interval (seconds)">3.0</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="6438463643554353" type="Insta" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="7176557550627819" type="InstaNote">
+                    <param id="0" name="Text">int(InstaNote.Text)+1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7427856368056499">
+            <conditions>
+                <condition id="17" name="On tap object" sid="2053238840371563" type="Touch">
+                    <param id="0" name="Object">Facebook</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="3180250409125829" type="Facebook" />
+                <condition id="-21" name="Is between values" sid="5347535954029309" type="System">
+                    <param id="0" name="Value">int(FaceNote.Text)</param>
+                    <param id="1" name="Lower bound">1</param>
+                    <param id="2" name="Upper bound">1000</param>
+                </condition>
+                <condition id="-10" name="For" sid="534765796504958" type="System">
+                    <param id="0" name="Name">&quot;facefor&quot;</param>
+                    <param id="1" name="Start index">1</param>
+                    <param id="2" name="End index">int(FaceNote.Text)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="4600569978494808" type="Hand">
+                    <param id="0" name="Object">NotificationCall</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2933225635887027" type="NotificationCall">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4621719070862731" type="Facebook">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7932190764112253" type="FaceNote">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2899884785154026">
+            <conditions>
+                <condition id="-18" name="On created" sid="4566160550546205" type="TwitNotificationCall" />
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="961747515894676" type="TwitNotificationCall">
+                    <param id="0" name="Angle">random(0,360)</param>
+                </action>
+                <action behavior="Bullet" id="5" name="Set enabled" sid="3122235054817884" type="TwitNotificationCall">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2532834414904204">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4404068158042089" type="TwitNotificationCall">
+                    <param id="0" name="Object">PhoneBoundingBox</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="2752517572072703" type="TwitNotificationCall">
+                    <param id="0" name="Object">PhoneBoundingBox</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8209669449393414">
+            <conditions>
+                <condition id="17" name="On tap object" sid="99584279344353" type="Touch">
+                    <param id="0" name="Object">TwitNotificationCall</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2644716749757762" type="System">
+                    <param id="0" name="Variable">FocusMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Phone&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7203894531950562" type="TwitNotificationCall" />
+            </actions>
+        </event-block>
+        <event-block sid="1619018387115451">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="7584185371148857" type="TwitNotificationCall" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="6538011493010164" type="UIText">
+                    <param id="0" name="Text">int(UIText.Text) + 10</param>
+                </action>
+                <action id="0" name="Set text" sid="7000613172571576" type="InstaNote">
+                    <param id="0" name="Text">int(InstaNote.Text)-1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="299225017864722">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="3122249163781738" type="TwitNotificationCall" />
+                <condition id="-21" name="Is between values" sid="41877998295678" type="System">
+                    <param id="0" name="Value">int(InstaNote.Text)</param>
+                    <param id="1" name="Lower bound">-1000</param>
+                    <param id="2" name="Upper bound">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="6426619254534097" type="Insta">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3766680935645175" type="InstaNote">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="290739006681918" type="InstaNote">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6407125283072249" type="TwitNotificationCall">
                     <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
