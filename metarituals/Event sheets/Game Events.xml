@@ -195,7 +195,7 @@
             </actions>
         </event-block>
         <comment>Steady score increase by focusing on life</comment>
-        <event-block sid="5204467237711053">
+        <event-block disabled="1" sid="5204467237711053">
             <conditions>
                 <condition id="-1" name="Every tick" sid="1366797422326962" type="System" />
                 <condition id="-14" name="Compare variable" sid="8267737726330184" type="System">
@@ -930,7 +930,7 @@
             </conditions>
             <actions>
                 <action behavior="Timer" id="0" name="Start timer" sid="7329946164895237" type="yarnball">
-                    <param id="0" name="Duration">4</param>
+                    <param id="0" name="Duration">5</param>
                     <param id="1" name="Type">0</param>
                     <param id="2" name="Tag">&quot;yarnTimer&quot;</param>
                 </action>
@@ -997,6 +997,9 @@
                     <param id="1" name="Layer">3</param>
                     <param id="2" name="X">500</param>
                     <param id="3" name="Y">2200</param>
+                </action>
+                <action id="0" name="Set text" sid="4111227816129875" type="UIText">
+                    <param id="0" name="Text">int(UIText.Text) - 50</param>
                 </action>
             </actions>
         </event-block>
