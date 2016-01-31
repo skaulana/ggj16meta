@@ -542,6 +542,25 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Logo" sid="7916044198899164">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7045369483886775" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502732" original-source="C:\Users\Sean\Desktop\Reality-Calling.png">
+                        <collision-poly>
+                            <point x="0.2225" y="0.486339" />
+                            <point x="0.5" y="0.0163934" />
+                            <point x="0.7925" y="0.453552" />
+                            <point x="0.96" y="0.497268" />
+                            <point x="0.8875" y="0.754098" />
+                            <point x="0.5" y="0.863388" />
+                            <point x="0.07" y="0.846995" />
+                            <point x="0.0325" y="0.497268" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

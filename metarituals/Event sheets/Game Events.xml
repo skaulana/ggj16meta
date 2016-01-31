@@ -35,7 +35,7 @@
                 </action>
                 <action id="-9" name="Set value" sid="299866174009866" type="System">
                     <param id="0" name="Variable">Timer</param>
-                    <param id="1" name="Value">60</param>
+                    <param id="1" name="Value">10</param>
                 </action>
                 <action id="0" name="Set text" sid="1118083357607806" type="TimerText">
                     <param id="0" name="Text">&quot;Time: &quot; &amp; Timer</param>

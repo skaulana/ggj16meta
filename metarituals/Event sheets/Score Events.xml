@@ -79,7 +79,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="4177695790564066" type="UIText">
-                            <param id="0" name="Text">str(int(LifeTotalTime / (PhoneTotalTime + LifeTotalTime) * 100)) &amp; &quot;% real&quot;</param>
+                            <param id="0" name="Text">&quot;Living &quot; &amp; str(int(LifeTotalTime / (PhoneTotalTime + LifeTotalTime) * 100)) &amp; &quot;% in reality&quot;</param>
                         </action>
                     </actions>
                 </event-block>

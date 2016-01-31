@@ -126,10 +126,10 @@
                 </instance>
                 <instance type="UIText" uid="25">
                     <properties>
-                        <text>Reality Calling</text>
+                        <text></text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Garamond,-96,400,0</font>
-                        <color>0,0,153</color>
+                        <font>Garamond,-64,400,0</font>
+                        <color>88,184,177</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -139,11 +139,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>271</x>
-                        <y>695</y>
+                        <x>184</x>
+                        <y>350</y>
                         <z>0</z>
-                        <width>559.485473633</width>
-                        <height>135.696105957</height>
+                        <width>727</width>
+                        <height>136</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -175,10 +175,10 @@
                 </instance>
                 <instance type="UIText" uid="27">
                     <properties>
-                        <text>Start</text>
+                        <text>Play</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Garamond,-96,400,0</font>
-                        <color>255,255,51</color>
+                        <color>186,164,94</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -205,7 +205,7 @@
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Garamond,-64,400,0</font>
-                        <color>255,255,51</color>
+                        <color>186,164,94</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -223,6 +223,28 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Logo" uid="33">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>548</x>
+                        <y>767</y>
+                        <z>0</z>
+                        <width>699.901611328</width>
+                        <height>320.204986572</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.502732217</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

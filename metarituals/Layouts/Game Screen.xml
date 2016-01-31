@@ -690,7 +690,7 @@
                         <text>0</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Garamond,-96,400,0</font>
-                        <color>255,255,153</color>
+                        <color>186,164,94</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
@@ -742,7 +742,7 @@
                         <text>Time:</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Garamond,-96,400,0</font>
-                        <color>255,204,0</color>
+                        <color>186,164,94</color>
                         <horizontal-alignment>Left</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
