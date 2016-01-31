@@ -10,6 +10,8 @@
     <unique-id>2m2oqhlgof90t</unique-id>
     <saved-with-version>22100</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -561,6 +563,30 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Cata" sid="7615113362372407">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6178831395249188" speed="5">
+                    <frame duration="1" hotspotX="0.500484" hotspotY="0.5" original-source="C:\Users\rach\Downloads\LifeCallingWarning.png">
+                        <collision-poly>
+                            <point x="0.0367861" y="0.333333" />
+                            <point x="0.499516" y="0.27193" />
+                            <point x="0.96999" y="0.27193" />
+                            <point x="0.972894" y="0.754386" />
+                            <point x="0.499516" y="0.596491" />
+                            <point x="0.0319458" y="0.710526" />
+                            <point x="0.0280736" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Audio" sid="9784736845887703">
+            <plugin id="Audio" />
+        </object-type>
+        <object-type global="1" name="notification_sound" sid="2443181119145717">
+            <plugin id="Arr" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -572,13 +598,30 @@
         <event-sheet>Score Events.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Touch" uid="28">
+        <global-instance type="Touch" uid="35">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
+        <global-instance type="Audio" uid="36">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="alert_49.m4a" />
+        <file name="alert_49.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">
