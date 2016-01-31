@@ -89,6 +89,28 @@
             <plugin id="TiledBg" />
             <texture />
         </object-type>
+        <object-type name="Insta" sid="4166388305269404">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7693742823569971" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rach\Desktop\social network364.png">
+                        <collision-poly>
+                            <point x="0.0742188" y="0.0742188" />
+                            <point x="0.5" y="0" />
+                            <point x="0.925781" y="0.0742188" />
+                            <point x="1" y="0.5" />
+                            <point x="0.925781" y="0.925781" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0742188" y="0.925781" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="InstaNote" sid="9601960266223526">
+            <plugin id="Text" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
