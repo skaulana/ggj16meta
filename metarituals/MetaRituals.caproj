@@ -238,20 +238,20 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="PhoneSmall" sid="4951651347373986">
+        <object-type name="redtwit" sid="7940006271182096">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8801617536959788" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.500626" original-source="C:\Users\Sean\Desktop\iPhone-5s-Gold.png">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4031567586182983" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rach\Downloads\RedNotification (1).png">
                         <collision-poly>
-                            <point x="0.0552632" y="0.0262829" />
-                            <point x="0.5" y="0.00500626" />
-                            <point x="0.952632" y="0.0225282" />
-                            <point x="1" y="0.499374" />
-                            <point x="0.957895" y="0.979975" />
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
                             <point x="0.5" y="1" />
-                            <point x="0.0473684" y="0.977472" />
-                            <point x="0.0105263" y="0.499374" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -343,6 +343,61 @@
                             <point x="0.5" y="0.261979" />
                             <point x="0.865741" y="0.513021" />
                             <point x="0.0722222" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PhoneSmall" sid="4951651347373986">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8801617536959788" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.500626" original-source="C:\Users\Sean\Desktop\iPhone-5s-Gold.png">
+                        <collision-poly>
+                            <point x="0.0552632" y="0.0262829" />
+                            <point x="0.5" y="0.00500626" />
+                            <point x="0.952632" y="0.0225282" />
+                            <point x="1" y="0.499374" />
+                            <point x="0.957895" y="0.979975" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0473684" y="0.977472" />
+                            <point x="0.0105263" y="0.499374" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="redface" sid="1168623810230299">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="923460194777818" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rach\Downloads\RedNotification (1).png">
+                        <collision-poly>
+                            <point x="0.145" y="0.145" />
+                            <point x="0.5" y="0" />
+                            <point x="0.855" y="0.145" />
+                            <point x="1" y="0.5" />
+                            <point x="0.855" y="0.855" />
+                            <point x="0.5" y="1" />
+                            <point x="0.145" y="0.855" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="AddTen" sid="5249271992073729">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7570030455774171" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rach\Downloads\favorite68.png">
+                        <collision-poly>
+                            <point x="0.160156" y="0.160156" />
+                            <point x="0.839844" y="0.160156" />
+                            <point x="1" y="0.5" />
+                            <point x="0.841797" y="0.841797" />
+                            <point x="0.158203" y="0.841797" />
+                            <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
