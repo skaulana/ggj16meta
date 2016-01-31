@@ -242,6 +242,9 @@
                 <action id="-15" name="Set visible" sid="7542066409469473" type="redtwit">
                     <param id="0" name="Visibility">1</param>
                 </action>
+                <action id="-15" name="Set visible" sid="1523585580788097" type="InstaNote">
+                    <param id="0" name="Visibility">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="6595362664106802">
@@ -349,6 +352,9 @@
                     <param id="0" name="Text">int(FaceNote.Text)+1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="3730534685145958" type="redface">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9171895430528219" type="FaceNote">
                     <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
@@ -466,10 +472,10 @@
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="3766680935645175" type="InstaNote">
-                    <param id="0" name="Visibility">1</param>
+                    <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="0" name="Set text" sid="290739006681918" type="InstaNote">
-                    <param id="0" name="Text">&quot;&quot;</param>
+                    <param id="0" name="Text">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="6407125283072249" type="TwitNotificationCall">
                     <param id="0" name="Visibility">0</param>
@@ -478,13 +484,13 @@
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="8699627128488166" type="FaceNote">
-                    <param id="0" name="Visibility">1</param>
+                    <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="9458949766555787" type="redtwit">
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="5058738949416065" type="redface">
-                    <param id="0" name="Visibility">1</param>
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
@@ -555,10 +561,10 @@
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="5028791678252241" type="FaceNote">
-                    <param id="0" name="Visibility">1</param>
+                    <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="0" name="Set text" sid="8918878605850086" type="FaceNote">
-                    <param id="0" name="Text">&quot;&quot;</param>
+                    <param id="0" name="Text">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="6446247711054757" type="FaceNotification">
                     <param id="0" name="Visibility">0</param>
@@ -567,13 +573,13 @@
                     <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-15" name="Set visible" sid="4079208714210547" type="InstaNote">
-                    <param id="0" name="Visibility">1</param>
+                    <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="4938197248792454" type="redface">
                     <param id="0" name="Visibility">0</param>
                 </action>
                 <action id="-15" name="Set visible" sid="3305835317967347" type="redtwit">
-                    <param id="0" name="Visibility">1</param>
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
