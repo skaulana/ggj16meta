@@ -403,6 +403,46 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="yarnball" sid="6801516152336077">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="4416894608275325">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="118161771682901" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501319" original-source="C:\Users\Shweta\Pictures\yarn-yellow.png">
+                        <collision-poly>
+                            <point x="0.112" y="0.147757" />
+                            <point x="0.5" y="0.0158311" />
+                            <point x="0.77" y="0.30343" />
+                            <point x="0.802" y="0.498681" />
+                            <point x="0.982" y="0.976253" />
+                            <point x="0.5" y="0.968338" />
+                            <point x="0.12" y="0.841689" />
+                            <point x="0" y="0.498681" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="yarnBoundBox_Left" sid="72738684041309">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2939813979544362" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="yarnBound_Right" sid="5757225222893804">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6193942330727768" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

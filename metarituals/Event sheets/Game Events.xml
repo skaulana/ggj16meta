@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Game Events</name>
     <events>
+        <variable constant="0" name="TintFactor" sid="7829829812131837" static="0" type="number">0</variable>
+        <variable constant="0" name="yarnAngle" sid="7541300717804049" static="0" type="number">0</variable>
         <variable constant="0" name="FocusMode" sid="9230301543912214" static="0" type="text">Phone</variable>
         <event-block sid="2076084608933646">
             <conditions>
@@ -773,8 +775,84 @@
             </actions>
         </event-block>
         <event-block sid="5786949729453944">
-            <conditions />
-            <actions />
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5568536012675333" type="System">
+                    <param id="0" name="Variable">FocusMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Phone&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="1373009895031092" type="yarnball">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5091025491986724">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="9990251487906957" type="System">
+                    <param id="0" name="Variable">FocusMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Life&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="4403034295264115" type="yarnball">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9069958576184421">
+            <conditions>
+                <condition id="17" name="On tap object" sid="4300634093033076" type="Touch">
+                    <param id="0" name="Object">yarnball</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="7704072653940312" type="System">
+                    <param id="0" name="Variable">FocusMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Life&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="4368756916489897" type="yarnball">
+                    <param id="0" name="Speed">random(700, 1500)</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="2354382578548526" type="yarnball">
+                    <param id="0" name="Angle">yarnAngle</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9819715071219635">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3929057506916661" type="yarnball">
+                    <param id="0" name="Object">yarnBound_Right</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="2226362769871882" type="System">
+                    <param id="0" name="Variable">yarnAngle</param>
+                    <param id="1" name="Value">180</param>
+                </action>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="8024165867456454" type="yarnball">
+                    <param id="0" name="Object">yarnBound_Right</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6734017150566516">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5734251427735613" type="yarnball">
+                    <param id="0" name="Object">yarnBoundBox_Left</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="3658040224214762" type="System">
+                    <param id="0" name="Variable">yarnAngle</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="2355482791070532" type="yarnball">
+                    <param id="0" name="Object">yarnBoundBox_Left</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
