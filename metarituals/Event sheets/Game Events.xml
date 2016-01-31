@@ -4,6 +4,7 @@
     <name>Game Events</name>
     <events>
         <variable constant="0" name="TintFactor" sid="4186075096699227" static="0" type="number">0</variable>
+        <variable constant="0" name="yarnAngle" sid="3471022113952008" static="0" type="number">0</variable>
         <variable constant="0" name="FocusMode" sid="9230301543912214" static="0" type="text">Phone</variable>
         <event-block sid="2076084608933646">
             <conditions>
@@ -43,6 +44,13 @@
                     <param id="1" name="Mode">1</param>
                     <param id="2" name="Effect">&quot;Tint&quot;</param>
                 </action>
+                <action id="-34" name="Set layer background color" sid="3969865307380458" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Color">rgb(255, 255, 255)</param>
+                </action>
+                <action id="4" name="Set font color" sid="188668954625227" type="UIText">
+                    <param id="0" name="Color">rgb(164, 47, 117)</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="6923375697151591">
@@ -70,6 +78,13 @@
                     <param id="0" name="Layer">0</param>
                     <param id="1" name="Mode">0</param>
                     <param id="2" name="Effect">&quot;Tint&quot;</param>
+                </action>
+                <action id="-34" name="Set layer background color" sid="2053597675271907" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Color">rgb(0, 51, 153)</param>
+                </action>
+                <action id="4" name="Set font color" sid="9165975260100793" type="UIText">
+                    <param id="0" name="Color">rgb(255, 255, 153)</param>
                 </action>
             </actions>
         </event-block>
@@ -191,6 +206,86 @@
             <actions>
                 <action id="0" name="Set text" sid="2860924648385344" type="UIText">
                     <param id="0" name="Text">int(UIText.Text) - 1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5747913623599056">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="2826628613552737" type="System">
+                    <param id="0" name="Variable">FocusMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Phone&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="5516197662327892" type="yarnball">
+                    <param id="0" name="Opacity">50</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="378321899671391">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="7614443484777332" type="System">
+                    <param id="0" name="Variable">FocusMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Life&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Set opacity" sid="147182410918421" type="yarnball">
+                    <param id="0" name="Opacity">100</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7743108396482152">
+            <conditions>
+                <condition id="17" name="On tap object" sid="2081436536259544" type="Touch">
+                    <param id="0" name="Object">yarnball</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="7375181220933864" type="System">
+                    <param id="0" name="Variable">FocusMode</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;Life&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="0" name="Set speed" sid="8183583322609196" type="yarnball">
+                    <param id="0" name="Speed">random(700, 1500)</param>
+                </action>
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3911789619605507" type="yarnball">
+                    <param id="0" name="Angle">yarnAngle</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2793711084516706">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="9183781578266279" type="yarnball">
+                    <param id="0" name="Object">yarnBound_Right</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="6532874126068534" type="System">
+                    <param id="0" name="Variable">yarnAngle</param>
+                    <param id="1" name="Value">180</param>
+                </action>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="3381386771827393" type="yarnball">
+                    <param id="0" name="Object">yarnBound_Right</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2826777549550449">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="4665222886663482" type="yarnball">
+                    <param id="0" name="Object">yarnBoundBox_Left</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="6197644367236786" type="yarnball">
+                    <param id="0" name="Object">yarnBoundBox_Left</param>
+                </action>
+                <action id="-9" name="Set value" sid="5868994473802217" type="System">
+                    <param id="0" name="Variable">yarnAngle</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
