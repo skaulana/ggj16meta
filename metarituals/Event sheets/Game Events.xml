@@ -235,9 +235,9 @@
             <actions>
                 <action id="-9" name="Destroy" sid="7609355734808052" type="Kitty" />
                 <action id="-16" name="Wait" sid="6321797710899625" type="System">
-                    <param id="0" name="Seconds">100</param>
+                    <param id="0" name="Seconds">4</param>
                 </action>
-                <action disabled="1" id="-3" name="Create object" sid="8174818443313231" type="System">
+                <action id="-3" name="Create object" sid="8174818443313231" type="System">
                     <param id="0" name="Object to create">BigKitty</param>
                     <param id="1" name="Layer">3</param>
                     <param id="2" name="X">500</param>
@@ -252,7 +252,7 @@
             <actions>
                 <action id="-10" name="Set value" sid="1057326029832346" type="BigKitty">
                     <param id="0" name="Instance variable">Taps</param>
-                    <param id="1" name="Value">20 + random(0,10)</param>
+                    <param id="1" name="Value">1</param>
                 </action>
             </actions>
         </event-block>
@@ -283,10 +283,6 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-10" name="Set value" sid="5620428936407687" type="BigKitty">
-                    <param id="0" name="Instance variable">Taps</param>
-                    <param id="1" name="Value">BigKitty.Taps - 1</param>
-                </action>
                 <action id="-23" name="Move at angle" sid="894903237893221" type="BigKitty">
                     <param id="0" name="Angle">90</param>
                     <param id="1" name="Distance">250</param>
@@ -295,10 +291,13 @@
         </event-block>
         <event-block sid="8386813616876731">
             <conditions>
+                <condition id="17" name="On tap object" sid="755298858856945" type="Touch">
+                    <param id="0" name="Object">yarnball</param>
+                </condition>
                 <condition id="-7" name="Compare instance variable" sid="126891773645475" type="BigKitty">
                     <param id="0" name="Instance variable">Taps</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
                 </condition>
             </conditions>
             <actions>
