@@ -275,6 +275,23 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="AddTen" sid="5249271992073729">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7570030455774171" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rach\Downloads\favorite68.png">
+                        <collision-poly>
+                            <point x="0.160156" y="0.160156" />
+                            <point x="0.839844" y="0.160156" />
+                            <point x="1" y="0.5" />
+                            <point x="0.841797" y="0.841797" />
+                            <point x="0.158203" y="0.841797" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

@@ -459,10 +459,13 @@
                 <action id="-15" name="Set visible" sid="4901260178592563" type="InstaNote">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="376940323892071" type="redtwit">
+                <action id="-15" name="Set visible" sid="9307804388278496" type="redface">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="9307804388278496" type="redface">
+                <action id="-15" name="Set visible" sid="8607111283237262" type="AddTen">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2699492624156169" type="redtwit">
                     <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
@@ -518,6 +521,15 @@
                 <action id="0" name="Set text" sid="7000613172571576" type="InstaNote">
                     <param id="0" name="Text">int(InstaNote.Text)-1</param>
                 </action>
+                <action id="-15" name="Set visible" sid="7246814228344879" type="AddTen">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="6787642330031352" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3713299257190776" type="AddTen">
+                    <param id="0" name="Visibility">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="299225017864722">
@@ -551,8 +563,17 @@
                 <action id="-15" name="Set visible" sid="9458949766555787" type="redtwit">
                     <param id="0" name="Visibility">0</param>
                 </action>
-                <action id="-15" name="Set visible" sid="8157147440770567" type="redface">
+                <action id="-15" name="Set visible" sid="5312592343845635" type="AddTen">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="7801565128033595" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-15" name="Set visible" sid="410594720822514" type="AddTen">
                     <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5058738949416065" type="redface">
+                    <param id="0" name="Visibility">1</param>
                 </action>
             </actions>
         </event-block>
@@ -607,6 +628,15 @@
                 <action id="0" name="Set text" sid="1829849100395555" type="FaceNote">
                     <param id="0" name="Text">int(FaceNote.Text)-1</param>
                 </action>
+                <action id="-15" name="Set visible" sid="2747054259181894" type="AddTen">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="1107592742591962" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7999001417804156" type="AddTen">
+                    <param id="0" name="Visibility">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="4596125407161797">
@@ -636,6 +666,21 @@
                 </action>
                 <action id="-15" name="Set visible" sid="4079208714210547" type="InstaNote">
                     <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4938197248792454" type="redface">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3305835317967347" type="redtwit">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2065524840338953" type="AddTen">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="429223778257665" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9266441580281678" type="AddTen">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
@@ -726,6 +771,10 @@
                     <param id="0" name="Text">int(FaceNote.Text)+1</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="5786949729453944">
+            <conditions />
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>
