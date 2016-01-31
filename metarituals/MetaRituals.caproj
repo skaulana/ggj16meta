@@ -525,6 +525,23 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="calling" sid="7455398691441567">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4713420840441886" speed="5">
+                    <frame duration="1" hotspotX="0.50045" hotspotY="0.5" original-source="C:\Users\rach\Downloads\PhoneCallingWarning.png">
+                        <collision-poly>
+                            <point x="0.0252025" y="0.245614" />
+                            <point x="0.49955" y="0.701754" />
+                            <point x="0.963996" y="0.350877" />
+                            <point x="0.961296" y="0.622807" />
+                            <point x="0.49955" y="0.789474" />
+                            <point x="0.0243024" y="0.763158" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

@@ -634,6 +634,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="calling" uid="32">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>540</x>
+                        <y>231</y>
+                        <z>0</z>
+                        <width>864.405090332</width>
+                        <height>88.69683075</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500450075</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects>
                 <effect-type name="RadialBlur">

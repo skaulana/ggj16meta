@@ -231,7 +231,7 @@
         <event-block sid="7051095369005591">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="3086882824346712" type="System">
-                    <param id="0" name="Interval (seconds)">2.0</param>
+                    <param id="0" name="Interval (seconds)">1</param>
                 </condition>
                 <condition id="-9" name="Is visible" sid="7121864311088436" type="Insta" />
             </conditions>
@@ -343,7 +343,7 @@
         <event-block sid="3590076730017712">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="481199909279386" type="System">
-                    <param id="0" name="Interval (seconds)">3.0</param>
+                    <param id="0" name="Interval (seconds)">2.0</param>
                 </condition>
                 <condition id="-9" name="Is visible" sid="6438463643554353" type="Facebook" />
             </conditions>
@@ -593,15 +593,24 @@
                 <condition id="-8" name="Compare two values" sid="4087734680504771" type="System">
                     <param id="0" name="First value">int(UIText.Text)</param>
                     <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Second value">50</param>
+                    <param id="2" name="Second value">100</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="8258484430428548" type="UIText">
-                    <param id="0" name="Text">int(UIText.Text) - 50</param>
+                    <param id="0" name="Text">int(UIText.Text) - 100</param>
                 </action>
                 <action id="0" name="Set text" sid="3523429822530771" type="InstaNote">
                     <param id="0" name="Text">int(InstaNote.Text)+1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7236151038844507" type="calling">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="3387673089122352" type="System">
+                    <param id="0" name="Seconds">1.25</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6708129825159156" type="calling">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
@@ -615,7 +624,7 @@
                 <condition id="-8" name="Compare two values" sid="172713517367798" type="System">
                     <param id="0" name="First value">int(UIText.Text)</param>
                     <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">50</param>
+                    <param id="2" name="Second value">100</param>
                 </condition>
             </conditions>
             <actions>
@@ -624,6 +633,15 @@
                 </action>
                 <action id="0" name="Set text" sid="1509589227430002" type="InstaNote">
                     <param id="0" name="Text">int(InstaNote.Text)+1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7870723847940058" type="calling">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="9145036079950774" type="System">
+                    <param id="0" name="Seconds">1.25</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8656514390128486" type="calling">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
@@ -637,15 +655,24 @@
                 <condition id="-8" name="Compare two values" sid="6041398927718932" type="System">
                     <param id="0" name="First value">int(UIText.Text)</param>
                     <param id="1" name="Comparison">5</param>
-                    <param id="2" name="Second value">50</param>
+                    <param id="2" name="Second value">100</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="662808514306701" type="UIText">
-                    <param id="0" name="Text">int(UIText.Text) - 50</param>
+                    <param id="0" name="Text">int(UIText.Text) - 100</param>
                 </action>
                 <action id="0" name="Set text" sid="4677816423791795" type="InstaNote">
                     <param id="0" name="Text">int(FaceNote.Text)+1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5840295945078617" type="calling">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="6426250641012907" type="System">
+                    <param id="0" name="Seconds">1.25</param>
+                </action>
+                <action id="-15" name="Set visible" sid="5631511669626339" type="calling">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
@@ -659,7 +686,7 @@
                 <condition id="-8" name="Compare two values" sid="9022538152244601" type="System">
                     <param id="0" name="First value">int(UIText.Text)</param>
                     <param id="1" name="Comparison">2</param>
-                    <param id="2" name="Second value">50</param>
+                    <param id="2" name="Second value">100</param>
                 </condition>
             </conditions>
             <actions>
@@ -668,6 +695,15 @@
                 </action>
                 <action id="0" name="Set text" sid="2592868622129506" type="InstaNote">
                     <param id="0" name="Text">int(FaceNote.Text)+1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2228306100728985" type="calling">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="5334571548270776" type="System">
+                    <param id="0" name="Seconds">1.25</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2988052888612177" type="calling">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
