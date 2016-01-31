@@ -1004,6 +1004,15 @@
                 <action id="0" name="Set text" sid="4111227816129875" type="UIText">
                     <param id="0" name="Text">int(UIText.Text) - 50</param>
                 </action>
+                <action id="-15" name="Set visible" sid="7676057654693136" type="Cata">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="6060593245254652" type="System">
+                    <param id="0" name="Seconds">1.25</param>
+                </action>
+                <action id="-15" name="Set visible" sid="986850033670219" type="Cata">
+                    <param id="0" name="Visibility">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="2213076964288984">

@@ -542,6 +542,24 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Cata" sid="7615113362372407">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6178831395249188" speed="5">
+                    <frame duration="1" hotspotX="0.500484" hotspotY="0.5" original-source="C:\Users\rach\Downloads\LifeCallingWarning.png">
+                        <collision-poly>
+                            <point x="0.0367861" y="0.333333" />
+                            <point x="0.499516" y="0.27193" />
+                            <point x="0.96999" y="0.27193" />
+                            <point x="0.972894" y="0.754386" />
+                            <point x="0.499516" y="0.596491" />
+                            <point x="0.0319458" y="0.710526" />
+                            <point x="0.0280736" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
