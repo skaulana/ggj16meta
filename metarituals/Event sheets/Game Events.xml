@@ -245,6 +245,12 @@
                 <action id="-15" name="Set visible" sid="1523585580788097" type="InstaNote">
                     <param id="0" name="Visibility">1</param>
                 </action>
+                <action id="0" name="Play" sid="8219236641046766" type="Audio">
+                    <param id="0" name="Audio file">alert_49</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">50</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="6595362664106802">
@@ -356,6 +362,12 @@
                 </action>
                 <action id="-15" name="Set visible" sid="9171895430528219" type="FaceNote">
                     <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Play" sid="977986560546557" type="Audio">
+                    <param id="0" name="Audio file">alert_49</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">50</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
