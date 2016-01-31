@@ -247,9 +247,18 @@
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="7609355734808052" type="Kitty" />
-                <action id="-16" name="Wait" sid="6321797710899625" type="System">
+                <action disabled="1" id="-16" name="Wait" sid="6321797710899625" type="System">
                     <param id="0" name="Seconds">4</param>
                 </action>
+            </actions>
+        </event-block>
+        <event-block sid="3212723169990816">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="2487618298964698" type="yarnball">
+                    <param id="0" name="Tag">&quot;yarnTimer&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
                 <action id="-3" name="Create object" sid="8174818443313231" type="System">
                     <param id="0" name="Object to create">BigKitty</param>
                     <param id="1" name="Layer">3</param>
@@ -877,6 +886,11 @@
                 <action behavior="Bullet" id="3" name="Set angle of motion" sid="2354382578548526" type="yarnball">
                     <param id="0" name="Angle">yarnAngle</param>
                 </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="7698591607949347" type="yarnball">
+                    <param id="0" name="Duration">5</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;yarnTimer&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="9819715071219635">
@@ -910,6 +924,14 @@
                     <param id="0" name="Object">yarnBoundBox_Left</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block sid="5723896496847185">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6612485939494065" type="Kitty">
+                    <param id="0" name="Object">yarnBound_Right</param>
+                </condition>
+            </conditions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

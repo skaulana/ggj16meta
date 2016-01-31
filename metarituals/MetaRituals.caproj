@@ -17,6 +17,8 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
     </used-behaviors>
     <used-effects>
         <effect author="Scirra" id="radialblur">Radial blur</effect>
@@ -112,6 +114,9 @@
             <behaviors>
                 <behavior-type name="Bullet" sid="5871144107629822">
                     <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="8723485987812606">
+                    <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -408,6 +413,9 @@
             <behaviors>
                 <behavior-type name="Bullet" sid="4416894608275325">
                     <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="8951494314666096">
+                    <behavior id="Timer" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
