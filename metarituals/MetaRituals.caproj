@@ -292,6 +292,25 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="minus50" sid="7594859000076088">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2168359805420616" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\rach\Downloads\dislike2.png">
+                        <collision-poly>
+                            <point x="0.128906" y="0.128906" />
+                            <point x="0.5" y="0.078125" />
+                            <point x="0.880859" y="0.119141" />
+                            <point x="0.990234" y="0.5" />
+                            <point x="0.78125" y="0.78125" />
+                            <point x="0.5" y="0.8125" />
+                            <point x="0.291016" y="0.708984" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
