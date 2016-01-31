@@ -155,7 +155,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="9331493124024701">
+        <event-block disabled="1" sid="9331493124024701">
             <conditions>
                 <condition id="17" name="On tap object" sid="9456009968291541" type="Touch">
                     <param id="0" name="Object">NotificationCall</param>
@@ -270,6 +270,11 @@
                     <param id="1" name="Start index">1</param>
                     <param id="2" name="End index">int(InstaNote.Text)</param>
                 </condition>
+                <condition id="-8" name="Compare two values" sid="4717377766492397" type="System">
+                    <param id="0" name="First value">BigKitty.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-15" name="Set visible" sid="9244700321857086" type="Insta">
@@ -309,6 +314,11 @@
                     <param id="0" name="Value">int(InstaNote.Text)</param>
                     <param id="1" name="Lower bound">-1000</param>
                     <param id="2" name="Upper bound">0</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="8823239709439774" type="System">
+                    <param id="0" name="First value">BigKitty.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
                 </condition>
             </conditions>
             <actions>
@@ -388,6 +398,11 @@
                     <param id="1" name="Start index">1</param>
                     <param id="2" name="End index">int(FaceNote.Text)</param>
                 </condition>
+                <condition id="-8" name="Compare two values" sid="7166588687458926" type="System">
+                    <param id="0" name="First value">BigKitty.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Spawn another object" sid="4600569978494808" type="Hand">
@@ -453,6 +468,11 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">&quot;Phone&quot;</param>
                 </condition>
+                <condition id="-8" name="Compare two values" sid="4441670144129366" type="System">
+                    <param id="0" name="First value">BigKitty.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="7203894531950562" type="TwitNotificationCall" />
@@ -461,6 +481,11 @@
         <event-block sid="1619018387115451">
             <conditions>
                 <condition id="-19" name="On destroyed" sid="7584185371148857" type="TwitNotificationCall" />
+                <condition id="-8" name="Compare two values" sid="3618301817586996" type="System">
+                    <param id="0" name="First value">BigKitty.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="6538011493010164" type="UIText">
@@ -478,6 +503,11 @@
                     <param id="0" name="Value">int(InstaNote.Text)</param>
                     <param id="1" name="Lower bound">-1000</param>
                     <param id="2" name="Upper bound">0</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="1107514091621844" type="System">
+                    <param id="0" name="First value">BigKitty.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
                 </condition>
             </conditions>
             <actions>
@@ -542,6 +572,11 @@
                     <param id="1" name="Comparison">0</param>
                     <param id="2" name="Value">&quot;Phone&quot;</param>
                 </condition>
+                <condition id="-8" name="Compare two values" sid="8914473176782451" type="System">
+                    <param id="0" name="First value">BigKitty.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="-9" name="Destroy" sid="5382052468801118" type="FaceNotification" />
@@ -550,6 +585,11 @@
         <event-block sid="4352450199808054">
             <conditions>
                 <condition id="-19" name="On destroyed" sid="4209867555392291" type="FaceNotification" />
+                <condition id="-8" name="Compare two values" sid="5070890927010946" type="System">
+                    <param id="0" name="First value">BigKitty.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
+                </condition>
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="2971342533285706" type="UIText">
@@ -567,6 +607,11 @@
                     <param id="0" name="Value">int(FaceNote.Text)</param>
                     <param id="1" name="Lower bound">-1000</param>
                     <param id="2" name="Upper bound">0</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="1476311341719023" type="System">
+                    <param id="0" name="First value">BigKitty.Count</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">0</param>
                 </condition>
             </conditions>
             <actions>
@@ -806,13 +851,11 @@
                 <condition id="17" name="On tap object" sid="4300634093033076" type="Touch">
                     <param id="0" name="Object">yarnball</param>
                 </condition>
-                <condition id="-14" name="Compare variable" sid="7704072653940312" type="System">
-                    <param id="0" name="Variable">FocusMode</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">&quot;Life&quot;</param>
-                </condition>
             </conditions>
             <actions>
+                <action id="0" name="Set text" sid="1741748738802389" type="UIText">
+                    <param id="0" name="Text">int(UIText.Text) + 5</param>
+                </action>
                 <action behavior="Bullet" id="0" name="Set speed" sid="4368756916489897" type="yarnball">
                     <param id="0" name="Speed">random(700, 1500)</param>
                 </action>
