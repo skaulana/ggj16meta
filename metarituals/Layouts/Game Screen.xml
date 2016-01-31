@@ -717,7 +717,7 @@
                 </instance>
                 <instance type="TimerText" uid="30">
                     <properties>
-                        <text>Time: 15</text>
+                        <text>Time:</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Garamond,-96,400,0</font>
                         <color>255,204,0</color>
