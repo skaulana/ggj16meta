@@ -199,6 +199,28 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="Hand" uid="1">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>525</x>
+                        <y>1472</y>
+                        <z>0</z>
+                        <width>1424.780639648</width>
+                        <height>1870.024658203</height>
+                        <depth>0</depth>
+                        <hotspotX>0.497023821</hotspotX>
+                        <hotspotY>0.698412716</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="PhoneShell" uid="0">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -215,28 +237,6 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Hand" uid="1">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>557</x>
-                        <y>1634</y>
-                        <z>0</z>
-                        <width>1234.970581055</width>
-                        <height>1261.127319336</height>
-                        <depth>0</depth>
-                        <hotspotX>0.605143726</hotspotX>
-                        <hotspotY>0.385185182</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

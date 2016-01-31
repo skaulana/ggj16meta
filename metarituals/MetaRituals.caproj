@@ -61,7 +61,18 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5658651601454527" speed="5">
-                    <frame duration="1" hotspotX="0.605144" hotspotY="0.385185" />
+                    <frame duration="1" hotspotX="0.497024" hotspotY="0.698413" original-source="C:\Users\Sean\Desktop\RightHand_Outline.png">
+                        <collision-poly>
+                            <point x="0.758929" y="0.578231" />
+                            <point x="0.5" y="0.918367" />
+                            <point x="0.229167" y="0.587302" />
+                            <point x="0.238095" y="0.498866" />
+                            <point x="0.925595" y="0.943311" />
+                            <point x="0.5" y="1" />
+                            <point x="0.157738" y="0.879819" />
+                            <point x="0.145833" y="0.498866" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
