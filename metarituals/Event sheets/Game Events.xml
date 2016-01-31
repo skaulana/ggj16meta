@@ -112,30 +112,30 @@
         </event-block>
         <event-block sid="6867294904265459">
             <conditions>
-                <condition disabled="1" id="-18" name="On created" sid="7986225444250673" type="NotificationCall" />
+                <condition id="-18" name="On created" sid="7986225444250673" type="NotificationCall" />
             </conditions>
             <actions>
-                <action behavior="Bullet" disabled="1" id="3" name="Set angle of motion" sid="5265257254629162" type="NotificationCall">
+                <action behavior="Bullet" id="3" name="Set angle of motion" sid="5265257254629162" type="NotificationCall">
                     <param id="0" name="Angle">random(0,360)</param>
                 </action>
-                <action behavior="Bullet" disabled="1" id="5" name="Set enabled" sid="7534398725249679" type="NotificationCall">
+                <action behavior="Bullet" id="5" name="Set enabled" sid="7534398725249679" type="NotificationCall">
                     <param id="0" name="State">1</param>
                 </action>
             </actions>
         </event-block>
         <event-block sid="1407059115445704">
             <conditions>
-                <condition disabled="1" id="0" name="On collision with another object" sid="301759475172199" type="NotificationCall">
+                <condition id="0" name="On collision with another object" sid="301759475172199" type="NotificationCall">
                     <param id="0" name="Object">PhoneBoundingBox</param>
                 </condition>
             </conditions>
             <actions>
-                <action behavior="Bullet" disabled="1" id="4" name="Bounce off object" sid="6262757419490937" type="NotificationCall">
+                <action behavior="Bullet" id="4" name="Bounce off object" sid="6262757419490937" type="NotificationCall">
                     <param id="0" name="Object">PhoneBoundingBox</param>
                 </action>
             </actions>
         </event-block>
-        <event-block disabled="1" sid="9331493124024701">
+        <event-block sid="9331493124024701">
             <conditions>
                 <condition id="17" name="On tap object" sid="9456009968291541" type="Touch">
                     <param id="0" name="Object">NotificationCall</param>
@@ -150,13 +150,16 @@
                 <action id="-9" name="Destroy" sid="9812775526503957" type="NotificationCall" />
             </actions>
         </event-block>
-        <event-block disabled="1" sid="5007158400054925">
+        <event-block sid="5007158400054925">
             <conditions>
                 <condition id="-19" name="On destroyed" sid="306751372409261" type="NotificationCall" />
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="234874387455936" type="UIText">
                     <param id="0" name="Text">int(UIText.Text) + 10</param>
+                </action>
+                <action id="0" name="Set text" sid="5422159196650021" type="InstaNote">
+                    <param id="0" name="Text">int(InstaNote.Text)-1</param>
                 </action>
             </actions>
         </event-block>
@@ -212,6 +215,7 @@
                 <condition id="-6" name="Every X seconds" sid="3086882824346712" type="System">
                     <param id="0" name="Interval (seconds)">2.0</param>
                 </condition>
+                <condition id="-9" name="Is visible" sid="7121864311088436" type="Insta" />
             </conditions>
             <actions>
                 <action id="0" name="Set text" sid="3513013800639671" type="InstaNote">
@@ -302,6 +306,81 @@
                     <param id="1" name="Layer">0</param>
                     <param id="2" name="X">1100</param>
                     <param id="3" name="Y">400</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6595362664106802">
+            <conditions>
+                <condition id="17" name="On tap object" sid="9829922028330516" type="Touch">
+                    <param id="0" name="Object">Insta</param>
+                </condition>
+                <condition id="-9" name="Is visible" sid="4340677460796298" type="Insta" />
+                <condition id="-21" name="Is between values" sid="6149178563933303" type="System">
+                    <param id="0" name="Value">int(InstaNote.Text)</param>
+                    <param id="1" name="Lower bound">1</param>
+                    <param id="2" name="Upper bound">1000</param>
+                </condition>
+                <condition id="-10" name="For" sid="1610633364311906" type="System">
+                    <param id="0" name="Name">&quot;instafor&quot;</param>
+                    <param id="1" name="Start index">1</param>
+                    <param id="2" name="End index">int(InstaNote.Text)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="5710745814120558" type="Hand">
+                    <param id="0" name="Object">NotificationCall</param>
+                    <param id="1" name="Layer">2</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8446218585611682" type="NotificationCall">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9244700321857086" type="Insta">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4049582475713059" type="InstaNote">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4502541080321943">
+            <conditions>
+                <condition id="17" name="On tap object" sid="6802497083492719" type="Touch">
+                    <param id="0" name="Object">Insta</param>
+                </condition>
+                <condition id="-21" name="Is between values" sid="1928858985246549" type="System">
+                    <param id="0" name="Value">int(InstaNote.Text)</param>
+                    <param id="1" name="Lower bound">-1000</param>
+                    <param id="2" name="Upper bound">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="1546841170984592" type="UIText">
+                    <param id="0" name="Text">int(UIText.Text)-5000</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8448151391683798">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="7718936693133333" type="NotificationCall" />
+                <condition id="-21" name="Is between values" sid="8901691388912819" type="System">
+                    <param id="0" name="Value">int(InstaNote.Text)</param>
+                    <param id="1" name="Lower bound">-1000</param>
+                    <param id="2" name="Upper bound">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="5146479971220849" type="Insta">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3396626712338606" type="InstaNote">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="8935962623818329" type="InstaNote">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6450882986668545" type="NotificationCall">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>

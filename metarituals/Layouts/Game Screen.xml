@@ -297,7 +297,7 @@
                 </instance>
                 <instance type="InstaNote" uid="11">
                     <properties>
-                        <text>Text</text>
+                        <text></text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-21.5,400,0</font>
                         <color>0,0,0</color>
@@ -310,19 +310,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>306</x>
-                        <y>984</y>
+                        <x>377</x>
+                        <y>1003</y>
                         <z>0</z>
-                        <width>200</width>
-                        <height>30</height>
+                        <width>62</width>
+                        <height>49</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
-                        <angle>0</angle>
+                        <angle>0.000033293</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Insta" uid="10">
+                <instance type="Insta" uid="7">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -332,11 +332,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>404</x>
-                        <y>1222</y>
+                        <x>346</x>
+                        <y>1151</y>
                         <z>0</z>
-                        <width>512</width>
-                        <height>512</height>
+                        <width>250.387695313</width>
+                        <height>250.387695313</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -400,7 +400,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BigKitty" uid="11">
+                <instance type="BigKitty" uid="12">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
