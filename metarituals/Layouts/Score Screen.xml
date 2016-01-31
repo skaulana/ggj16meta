@@ -227,7 +227,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Logo" uid="33">
+                <instance type="Logo" uid="28">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

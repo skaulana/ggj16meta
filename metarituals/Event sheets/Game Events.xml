@@ -1070,6 +1070,10 @@
                     <param id="0" name="Angle">90</param>
                     <param id="1" name="Distance">250</param>
                 </action>
+                <action id="-12" name="Subtract from" sid="7726879926329023" type="BigKitty">
+                    <param id="0" name="Instance variable">Taps</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="1927645496214982">
@@ -1109,6 +1113,27 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="5586329326016268">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="7412645563870163" type="BigKitty">
+                    <param id="0" name="Instance variable">Taps</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="8384882719541027" type="BigKitty" />
+                <action id="-16" name="Wait" sid="1535876025512189" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-3" name="Create object" sid="2045397569360248" type="System">
+                    <param id="0" name="Object to create">Kitty</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">1100</param>
+                    <param id="3" name="Y">400</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
