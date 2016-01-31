@@ -39,6 +39,11 @@
                     <param id="1" name="Value">15</param>
                 </action>
                 <action id="-9" name="Destroy" sid="6851370606595526" type="BigKitty" />
+                <action behavior="Timer" id="0" name="Start timer" sid="2585205367754184" type="yarnball">
+                    <param id="0" name="Duration">5</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;yarnTimer&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="2218747031618236">
