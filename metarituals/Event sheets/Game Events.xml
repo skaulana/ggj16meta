@@ -5,6 +5,7 @@
     <events>
         <variable constant="0" name="Timer" sid="4443136226926945" static="0" type="number">1</variable>
         <variable constant="0" name="yarnAngle" sid="7541300717804049" static="0" type="number">0</variable>
+        <variable constant="0" name="SpawnFrequency" sid="8495139892235462" static="0" type="number">2</variable>
         <variable constant="0" name="FocusMode" sid="9230301543912214" static="0" type="text">Phone</variable>
         <event-block sid="2076084608933646">
             <conditions>
@@ -36,6 +37,10 @@
                 <action id="-9" name="Set value" sid="299866174009866" type="System">
                     <param id="0" name="Variable">Timer</param>
                     <param id="1" name="Value">60</param>
+                </action>
+                <action id="-9" name="Set value" sid="3967757956791268" type="System">
+                    <param id="0" name="Variable">SpawnFrequency</param>
+                    <param id="1" name="Value">2</param>
                 </action>
                 <action id="0" name="Set text" sid="1118083357607806" type="TimerText">
                     <param id="0" name="Text">&quot;Time: &quot; &amp; Timer</param>
@@ -232,7 +237,7 @@
         <event-block sid="7051095369005591">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="3086882824346712" type="System">
-                    <param id="0" name="Interval (seconds)">1</param>
+                    <param id="0" name="Interval (seconds)">SpawnFrequency * 0.5</param>
                 </condition>
                 <condition id="-9" name="Is visible" sid="7121864311088436" type="Insta" />
             </conditions>
@@ -360,7 +365,7 @@
         <event-block sid="3590076730017712">
             <conditions>
                 <condition id="-6" name="Every X seconds" sid="481199909279386" type="System">
-                    <param id="0" name="Interval (seconds)">2.0</param>
+                    <param id="0" name="Interval (seconds)">SpawnFrequency</param>
                 </condition>
                 <condition id="-9" name="Is visible" sid="6438463643554353" type="Facebook" />
             </conditions>
@@ -843,6 +848,21 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="5524396318773688">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="5170716407007374" type="System">
+                            <param id="0" name="First value">Timer</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">30</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4330797142604494" type="System">
+                            <param id="0" name="Variable">SpawnFrequency</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-block>
