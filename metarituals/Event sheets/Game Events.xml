@@ -35,7 +35,7 @@
                 </action>
                 <action id="-9" name="Set value" sid="299866174009866" type="System">
                     <param id="0" name="Variable">Timer</param>
-                    <param id="1" name="Value">10</param>
+                    <param id="1" name="Value">60</param>
                 </action>
                 <action id="0" name="Set text" sid="1118083357607806" type="TimerText">
                     <param id="0" name="Text">&quot;Time: &quot; &amp; Timer</param>
@@ -245,6 +245,12 @@
                 <action id="-15" name="Set visible" sid="1523585580788097" type="InstaNote">
                     <param id="0" name="Visibility">1</param>
                 </action>
+                <action id="0" name="Play" sid="8219236641046766" type="Audio">
+                    <param id="0" name="Audio file">alert_49</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">50</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="6595362664106802">
@@ -356,6 +362,12 @@
                 </action>
                 <action id="-15" name="Set visible" sid="9171895430528219" type="FaceNote">
                     <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Play" sid="977986560546557" type="Audio">
+                    <param id="0" name="Audio file">alert_49</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">50</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -993,7 +1005,7 @@
             <actions>
                 <action id="-9" name="Destroy" sid="1327165761497314" type="Kitty" />
                 <action id="-16" name="Wait" sid="4432169166128118" type="System">
-                    <param id="0" name="Seconds">100</param>
+                    <param id="0" name="Seconds">4</param>
                 </action>
                 <action id="-3" name="Create object" sid="5678390288587397" type="System">
                     <param id="0" name="Object to create">BigKitty</param>
@@ -1002,7 +1014,16 @@
                     <param id="3" name="Y">2200</param>
                 </action>
                 <action id="0" name="Set text" sid="4111227816129875" type="UIText">
-                    <param id="0" name="Text">int(UIText.Text) - 50</param>
+                    <param id="0" name="Text">int(UIText.Text) - 100</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7676057654693136" type="Cata">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="6060593245254652" type="System">
+                    <param id="0" name="Seconds">1.25</param>
+                </action>
+                <action id="-15" name="Set visible" sid="986850033670219" type="Cata">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>

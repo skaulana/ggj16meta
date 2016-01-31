@@ -645,12 +645,34 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>540</x>
-                        <y>231</y>
+                        <y>202</y>
                         <z>0</z>
                         <width>864.405090332</width>
                         <height>88.69683075</height>
                         <depth>0</depth>
                         <hotspotX>0.500450075</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Cata" uid="33">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>535</x>
+                        <y>279</y>
+                        <z>0</z>
+                        <width>849</width>
+                        <height>82</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500484049</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -768,6 +790,14 @@
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="notification_sound" uid="34">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>
